@@ -5,17 +5,18 @@ services:
   samba:
     image: dperson/samba # no hay tag con versiones, solo latest
     restart: always
-    command: '-u "pi;password" -s "media;/media;yes;no" -s "downloads;/downloads;yes;no"'
+    command: '-u "darkvice_pi;OnLy43369723303709" -s "media;/media;yes;no" -s "downloads;/downloads;yes;no" -s "datos;/mnt;yes;no;yes;all;none"'
     stdin_open: true
     tty: true
     environment:
-      - TZ=America/Argentina/Mendoza
+      - TZ=America/Lima
     ports:
       - 139:139
       - 445:445
     volumes:
       - ${MEDIA}:/media
       - ${STORAGE}/torrents:/downloads
+      - /DATA_NAS/datos:/mnt #compartir datos con PC
 
   plex:
     image: jaymoulin/plex:1.30.1.6562
@@ -26,8 +27,9 @@ services:
     # ports:
     #  - 32400:32400
     #  - 33400:33400
+    hostname: plex
     environment:
-      - TZ=America/Argentina/Mendoza
+      - TZ=America/Lima
     volumes:
       - ${STORAGE}/Plex Media Server:/root/Library/Application Support/Plex Media Server
       - ${MEDIA}:/media
@@ -39,7 +41,7 @@ services:
     image : jaymoulin/transmission:3.00-1.6.1
     command: transmission-daemon -f -g /config
     volumes:
-      - ./transmission:/config
+      - ${STORAGE}/transmission_config:/config
       - ${STORAGE}/torrents:/downloads
     ports:
       - 9091:9091
@@ -52,15 +54,16 @@ services:
   flexget:
     image: wiserain/flexget:3.5
     volumes:
-      - ./flexget:/config
-      - ./flexget/custom-cont-init.d:/custom-cont-init.d
+      - ${STORAGE}/flexget_config:/config
+      - ${STORAGE}/flexget_config/config-trakt.yml:/config/config-trakt.yml # <--- ¡CORREGIDO para ir al ZFS!
+      - ./flexget/custom-cont-init.d/mediainfo.sh:/custom-cont-init.d/mediainfo.sh # <--- Esta se mantiene desde el repositorio
       - ${STORAGE}/torrents:/downloads
       - ${MEDIA}:/storage
     ports:
       - 5050:5050
     environment:
-      - PUID=1001
-      - PGID=1001
+      - PUID=1000
+      - PGID=1000
       - TORRENT_PLUGIN=transmission
-      - FG_WEBUI_PASSWD=p3l4d0_N3RD # la puedes cambiar por la que quieras
+      - FG_WEBUI_PASSWD=D4rkV1ce # la puedes cambiar por la que quieras
     restart: unless-stopped
