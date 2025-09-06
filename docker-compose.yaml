@@ -5,7 +5,7 @@ services:
     restart: always
     command:
       - -u
-      - 'darkvice;OnLy180488@'
+      - 'darkvice;${SAMBA_PASS}'
       - -s
       - media;/media;yes;no;no;darkvice;none
       - -s
@@ -32,6 +32,10 @@ services:
       - 'force group = darkvice'
       - -g
       - 'hosts allow = 192.168.1.0/24 127.0.0.1'
+      - -g
+      - 'client min protocol = SMB2_10'
+      - -g
+      - 'server min protocol = SMB2_10'
       - -r
     environment:
       - TZ=America/Lima
@@ -46,6 +50,11 @@ services:
       - ${MEDIA}:/media
       - ${STORAGE}/torrents:/downloads
       - /DATA_NAS/datos:/mnt
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
 
   plex:
     image: jaymoulin/plex:1.30.1.6562
