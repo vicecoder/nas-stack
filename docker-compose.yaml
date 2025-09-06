@@ -94,14 +94,20 @@ services:
     volumes:
       - ${STORAGE}/flexget_config:/config
       - ${STORAGE}/flexget_config/config-trakt.yml:/config/config-trakt.yml # <--- ¡CORREGIDO para ir al ZFS!
-      - ./flexget/custom-cont-init.d/mediainfo.sh:/custom-cont-init.d/mediainfo.sh # <--- Esta se mantiene desde el repositorio
+      - /opt/lsio-flexget-init/mediainfo.sh:/custom-cont-init.d/mediainfo.sh:ro # <--- Esta se mantiene desde el repositorio
       - ${STORAGE}/torrents:/downloads
       - ${MEDIA}:/storage
     ports:
-      - 5050:5050
+      - 192.168.1.10:5050:5050
     environment:
+      - TZ=America/Lima
       - PUID=1000
       - PGID=1000
       - TORRENT_PLUGIN=transmission
-      - FG_WEBUI_PASSWD=D4rkV1ce # la puedes cambiar por la que quieras
+      - FG_WEBUI_PASSWD=${FLEXGET_WEBUI_PASS} # la puedes cambiar por la que quieras
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
     restart: unless-stopped
