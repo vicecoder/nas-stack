@@ -1,0 +1,11 @@
+[Unit]
+Description=ZFS auto snapshot (DATA_NAS/datos, keep 3)
+Wants=zfs.target
+After=zfs.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/zfs-auto-snapshot.sh
+Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=6
