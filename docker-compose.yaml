@@ -1,22 +1,49 @@
-version: "3.7"
-
 services:
 
   samba:
-    image: dperson/samba # no hay tag con versiones, solo latest
+    image: dperson/samba
     restart: always
-    command: '-u "darkvice_pi;OnLy43369723303709" -s "media;/media;yes;no" -s "downloads;/downloads;yes;no" -s "datos;/mnt;yes;no;yes;all;none"'
-    stdin_open: true
-    tty: true
+    command:
+      - -u
+      - 'darkvice;OnLy180488@'
+      - -s
+      - media;/media;yes;no;no;darkvice;none
+      - -s
+      - downloads;/downloads;yes;no;no;darkvice;none
+      - -s
+      - datos;/mnt;yes;no;no;darkvice;none
+      - -g
+      - 'workgroup = WORKGROUP'   # reemplaza WORKGROUP si tu Windows usa otro
+      - -g
+      - map to guest = Bad User
+      - -g
+      - create mask = 0664
+      - -g
+      - directory mask = 0775
+      - -g
+      - vfs objects = acl_xattr
+      - -g
+      - store dos attributes = yes
+      - -g
+      - map acl inherit = yes
+      - -g
+      - 'force user = darkvice'
+      - -g
+      - 'force group = darkvice'
+      - -r
     environment:
       - TZ=America/Lima
+      - PUID=1000
+      - PGID=1000
     ports:
+      - 137:137/udp
+      - 138:138/udp
       - 139:139
       - 445:445
     volumes:
       - ${MEDIA}:/media
       - ${STORAGE}/torrents:/downloads
-      - /DATA_NAS/datos:/mnt #compartir datos con PC
+      - /DATA_NAS/datos:/mnt
 
   plex:
     image: jaymoulin/plex:1.30.1.6562
