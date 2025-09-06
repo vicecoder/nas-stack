@@ -30,16 +30,18 @@ services:
       - 'force user = darkvice'
       - -g
       - 'force group = darkvice'
+      - -g
+      - 'hosts allow = 192.168.1.0/24 127.0.0.1'
       - -r
     environment:
       - TZ=America/Lima
       - PUID=1000
       - PGID=1000
     ports:
-      - 137:137/udp
-      - 138:138/udp
-      - 139:139
-      - 445:445
+      - 192.168.1.10:137:137/udp
+      - 192.168.1.10:138:138/udp
+      - 192.168.1.10:139:139
+      - 192.168.1.10:445:445
     volumes:
       - ${MEDIA}:/media
       - ${STORAGE}/torrents:/downloads
