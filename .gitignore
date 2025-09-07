@@ -3,9 +3,11 @@
 *.log
 *.tmp
 
-# Ignorar TODO en auditorias...
-auditorias/**/*
-# ...EXCEPTO los 4 archivos clave por carpeta:
+# Ignora TODO bajo auditorias...
+auditorias/**
+# ...pero permite recorrer directorios y re-incluir archivos clave:
+!auditorias/
+!auditorias/**/
 !auditorias/**/zfs.txt
 !auditorias/**/docker_basico.txt
 !auditorias/**/pihole.txt
