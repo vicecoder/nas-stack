@@ -1,4 +1,12 @@
+# Artefactos comunes
 *.tar.gz
 *.log
 *.tmp
-auditorias/*/
+
+# Ignorar TODO en auditorias...
+auditorias/**/*
+# ...EXCEPTO los 4 archivos clave por carpeta:
+!auditorias/**/zfs.txt
+!auditorias/**/docker_basico.txt
+!auditorias/**/pihole.txt
+!auditorias/**/red.txt
