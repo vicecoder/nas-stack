@@ -12,3 +12,4 @@ auditorias/**
 !auditorias/**/docker_basico.txt
 !auditorias/**/pihole.txt
 !auditorias/**/red.txt
+!auditorias/**/docker_*.txt
