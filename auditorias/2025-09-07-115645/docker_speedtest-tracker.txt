@@ -1,0 +1,232 @@
+===== speedtest-tracker: inspect (resumen con jq) =====
+{
+  "Name": "/speedtest-tracker",
+  "State": {
+    "Status": "running",
+    "Running": true,
+    "Health": "n/a"
+  },
+  "RestartPolicy": "unless-stopped",
+  "Networks": [
+    "docker_default"
+  ],
+  "IPs": {
+    "docker_default": "172.18.0.3"
+  },
+  "Mounts": [
+    {
+      "Type": "bind",
+      "Source": "/home/darkvice/docker/speedtest/config",
+      "Destination": "/config",
+      "RW": true
+    },
+    {
+      "Type": "bind",
+      "Source": "/home/darkvice/docker/speedtest/config/keys",
+      "Destination": "/config/keys",
+      "RW": true
+    }
+  ]
+}
+
+===== speedtest-tracker: logs (últ. 200 líneas) =====
+───────────────────────────────────────
+    
+using keys found in /config/keys
+**** The following active confs have different version dates than the samples that are shipped. ****
+**** This may be due to user customization or an update to the samples. ****
+**** You should compare the following files to the samples in the same folder and update them. ****
+**** Use the link at the top of the file to view the changelog. ****
+┌────────────┬────────────┬────────────────────────────────────────────────────────────────────────┐
+│  old date  │  new date  │ path                                                                   │
+├────────────┼────────────┼────────────────────────────────────────────────────────────────────────┤
+│ 2023-04-13 │ 2024-07-16 │ /config/nginx/site-confs/default.conf                                  │
+│ 2023-04-13 │ 2024-12-17 │ /config/nginx/nginx.conf                                               │
+│ 2023-08-13 │ 2024-12-06 │ /config/nginx/ssl.conf                                                 │
+└────────────┴────────────┴────────────────────────────────────────────────────────────────────────┘
+[custom-init] No custom files found, skipping...
+2025/09/03 13:07:31 [warn] 273#273: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /config/nginx/site-confs/default.conf:7
+2025/09/03 13:07:31 [warn] 273#273: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /config/nginx/site-confs/default.conf:8
+[ls.io-init] done.
+[2025-09-03 21:00:16] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-03 22:00:21] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-03 23:00:17] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-04 00:00:23] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-04 01:00:17] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-04 02:00:17] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-04 03:00:18] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-04 04:00:17] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-04 05:00:17] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-04 06:00:19] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-04 07:00:19] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-04 08:00:18] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-04 09:00:17] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-04 10:00:23] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-04 11:00:18] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-04 13:00:18] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-04 14:00:17] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-04 15:00:22] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-04 16:00:19] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-04 17:00:18] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-04 18:00:17] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-04 19:00:22] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-04 20:00:18] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-04 21:00:16] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[migrations] started
+[migrations] 01-nginx-site-confs-default: skipped
+[migrations] done
+usermod: no changes
+───────────────────────────────────────
+
+      ██╗     ███████╗██╗ ██████╗
+      ██║     ██╔════╝██║██╔═══██╗
+      ██║     ███████╗██║██║   ██║
+      ██║     ╚════██║██║██║   ██║
+      ███████╗███████║██║╚██████╔╝
+      ╚══════╝╚══════╝╚═╝ ╚═════╝
+
+   Brought to you by linuxserver.io
+───────────────────────────────────────
+
+To support the app dev(s) visit:
+speedtest-tracker: https://github.com/sponsors/alexjustesen
+
+To support LSIO projects visit:
+https://www.linuxserver.io/donate/
+
+───────────────────────────────────────
+GID/UID
+───────────────────────────────────────
+
+User UID:    1000
+User GID:    1000
+───────────────────────────────────────
+Linuxserver.io version: v1.2.5-ls82
+Build-date: 2025-03-01T21:25:51+00:00
+───────────────────────────────────────
+    
+using keys found in /config/keys
+**** The following active confs have different version dates than the samples that are shipped. ****
+**** This may be due to user customization or an update to the samples. ****
+**** You should compare the following files to the samples in the same folder and update them. ****
+**** Use the link at the top of the file to view the changelog. ****
+┌────────────┬────────────┬────────────────────────────────────────────────────────────────────────┐
+│  old date  │  new date  │ path                                                                   │
+├────────────┼────────────┼────────────────────────────────────────────────────────────────────────┤
+│ 2023-04-13 │ 2024-07-16 │ /config/nginx/site-confs/default.conf                                  │
+│ 2023-04-13 │ 2024-12-17 │ /config/nginx/nginx.conf                                               │
+│ 2023-08-13 │ 2024-12-06 │ /config/nginx/ssl.conf                                                 │
+└────────────┴────────────┴────────────────────────────────────────────────────────────────────────┘
+[custom-init] No custom files found, skipping...
+[ls.io-init] done.
+2025/09/05 02:10:44 [warn] 269#269: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /config/nginx/site-confs/default.conf:7
+2025/09/05 02:10:44 [warn] 269#269: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /config/nginx/site-confs/default.conf:8
+[migrations] started
+[migrations] 01-nginx-site-confs-default: skipped
+[migrations] done
+usermod: no changes
+───────────────────────────────────────
+
+      ██╗     ███████╗██╗ ██████╗
+      ██║     ██╔════╝██║██╔═══██╗
+      ██║     ███████╗██║██║   ██║
+      ██║     ╚════██║██║██║   ██║
+      ███████╗███████║██║╚██████╔╝
+      ╚══════╝╚══════╝╚═╝ ╚═════╝
+
+   Brought to you by linuxserver.io
+───────────────────────────────────────
+
+To support the app dev(s) visit:
+speedtest-tracker: https://github.com/sponsors/alexjustesen
+
+To support LSIO projects visit:
+https://www.linuxserver.io/donate/
+
+───────────────────────────────────────
+GID/UID
+───────────────────────────────────────
+
+User UID:    1000
+User GID:    1000
+───────────────────────────────────────
+Linuxserver.io version: v1.2.5-ls82
+Build-date: 2025-03-01T21:25:51+00:00
+───────────────────────────────────────
+    
+using keys found in /config/keys
+**** The following active confs have different version dates than the samples that are shipped. ****
+**** This may be due to user customization or an update to the samples. ****
+**** You should compare the following files to the samples in the same folder and update them. ****
+**** Use the link at the top of the file to view the changelog. ****
+┌────────────┬────────────┬────────────────────────────────────────────────────────────────────────┐
+│  old date  │  new date  │ path                                                                   │
+├────────────┼────────────┼────────────────────────────────────────────────────────────────────────┤
+│ 2023-04-13 │ 2024-07-16 │ /config/nginx/site-confs/default.conf                                  │
+│ 2023-04-13 │ 2024-12-17 │ /config/nginx/nginx.conf                                               │
+│ 2023-08-13 │ 2024-12-06 │ /config/nginx/ssl.conf                                                 │
+└────────────┴────────────┴────────────────────────────────────────────────────────────────────────┘
+[custom-init] No custom files found, skipping...
+[ls.io-init] done.
+2025/09/05 02:22:32 [warn] 272#272: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /config/nginx/site-confs/default.conf:7
+2025/09/05 02:22:32 [warn] 272#272: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /config/nginx/site-confs/default.conf:8
+[2025-09-04 22:00:22] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-04 23:00:19] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-05 00:00:21] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-05 01:00:20] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-05 02:00:18] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-05 03:00:16] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-05 04:00:17] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-05 05:00:18] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-05 06:00:21] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-05 07:00:17] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-05 08:00:19] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-05 09:00:18] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-05 10:00:18] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-05 11:00:17] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-05 12:00:21] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-05 13:00:15] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-05 14:00:17] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-05 15:00:21] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-05 16:00:16] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-05 17:00:23] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-05 18:00:19] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-05 19:00:18] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-05 20:00:17] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-05 21:00:18] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-05 23:00:19] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-06 00:00:18] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-06 01:00:17] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-06 03:00:15] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-06 04:00:19] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-06 05:00:19] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-06 06:00:17] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-06 07:00:18] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-06 09:00:17] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-06 10:00:19] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-06 11:00:17] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-06 12:00:23] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-06 13:00:18] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-06 14:00:20] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-06 15:00:19] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-06 16:00:21] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-06 17:00:17] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-06 18:00:19] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-06 19:00:29] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-06 20:00:22] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-06 21:00:18] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-06 22:00:17] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-06 23:00:22] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-07 00:00:18] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-07 01:00:17] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-07 02:00:19] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-07 03:00:17] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-07 04:00:18] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-07 05:00:20] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-07 06:00:20] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-07 07:00:19] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-07 08:00:18] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-07 09:00:18] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-07 10:00:18] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-07 11:00:17] production.WARNING: Failed Telegram thresholds not found, won't send notification.  
+[2025-09-07 12:00:19] production.WARNING: Failed Telegram thresholds not found, won't send notification.  

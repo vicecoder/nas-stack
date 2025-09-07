@@ -1,0 +1,226 @@
+===== wg-easy: inspect (resumen con jq) =====
+{
+  "Name": "/wg-easy",
+  "State": {
+    "Status": "running",
+    "Running": true,
+    "Health": "healthy"
+  },
+  "RestartPolicy": "unless-stopped",
+  "Networks": [
+    "docker_wg-easy"
+  ],
+  "IPs": {
+    "docker_wg-easy": "18.4.1.2"
+  },
+  "Mounts": [
+    {
+      "Type": "bind",
+      "Source": "/home/darkvice/docker/.wg-easy/etc",
+      "Destination": "/etc/wireguard",
+      "RW": true
+    }
+  ]
+}
+
+===== wg-easy: logs (últ. 200 líneas) =====
+SIGTERM signal received.
+$ wg-quick down wg0
+2025-05-22T18:58:38.750Z Server Listening on http://0.0.0.0:51821
+2025-05-22T18:58:38.754Z WireGuard Loading configuration...
+2025-05-22T18:58:38.757Z WireGuard Configuration loaded.
+2025-05-22T18:58:38.758Z WireGuard Config saving...
+2025-05-22T18:58:38.762Z WireGuard Config saved.
+$ wg-quick down wg0
+$ wg-quick up wg0
+2025-05-22T18:58:38.876Z WireGuard Config syncing...
+$ wg syncconf wg0 <(wg-quick strip wg0)
+2025-05-22T18:58:38.914Z WireGuard Config synced.
+2025-06-07T15:32:32.059Z Server Listening on http://0.0.0.0:51821
+2025-06-07T15:32:32.069Z WireGuard Loading configuration...
+2025-06-07T15:32:32.074Z WireGuard Configuration loaded.
+2025-06-07T15:32:32.074Z WireGuard Config saving...
+2025-06-07T15:32:32.077Z WireGuard Config saved.
+$ wg-quick down wg0
+$ wg-quick up wg0
+2025-06-07T15:32:32.292Z WireGuard Config syncing...
+$ wg syncconf wg0 <(wg-quick strip wg0)
+2025-06-07T15:32:32.351Z WireGuard Config synced.
+SIGTERM signal received.
+$ wg-quick down wg0
+2025-06-16T02:40:02.025Z Server Listening on http://0.0.0.0:51821
+2025-06-16T02:40:02.034Z WireGuard Loading configuration...
+2025-06-16T02:40:02.047Z WireGuard Configuration loaded.
+2025-06-16T02:40:02.048Z WireGuard Config saving...
+2025-06-16T02:40:02.054Z WireGuard Config saved.
+$ wg-quick down wg0
+$ wg-quick up wg0
+$ wg syncconf wg0 <(wg-quick strip wg0)
+2025-06-16T02:40:02.415Z WireGuard Config syncing...
+2025-06-16T02:40:02.539Z WireGuard Config synced.
+SIGTERM signal received.
+$ wg-quick down wg0
+2025-06-21T17:05:02.870Z Server Listening on http://0.0.0.0:51821
+2025-06-21T17:05:02.890Z WireGuard Loading configuration...
+2025-06-21T17:05:02.899Z WireGuard Configuration loaded.
+2025-06-21T17:05:02.899Z WireGuard Config saving...
+2025-06-21T17:05:02.910Z WireGuard Config saved.
+$ wg-quick down wg0
+$ wg-quick up wg0
+2025-06-21T17:05:03.124Z WireGuard Config syncing...
+$ wg syncconf wg0 <(wg-quick strip wg0)
+2025-06-21T17:05:03.171Z WireGuard Config synced.
+SIGTERM signal received.
+$ wg-quick down wg0
+2025-08-20T02:14:32.786Z Server Listening on http://0.0.0.0:51821
+2025-08-20T02:14:32.792Z WireGuard Loading configuration...
+2025-08-20T02:14:32.797Z WireGuard Configuration loaded.
+2025-08-20T02:14:32.797Z WireGuard Config saving...
+2025-08-20T02:14:32.800Z WireGuard Config saved.
+$ wg-quick down wg0
+$ wg-quick up wg0
+2025-08-20T02:14:32.998Z WireGuard Config syncing...
+$ wg syncconf wg0 <(wg-quick strip wg0)
+2025-08-20T02:14:33.040Z WireGuard Config synced.
+SIGTERM signal received.
+$ wg-quick down wg0
+2025-08-27T02:09:00.087Z Server Listening on http://0.0.0.0:51821
+2025-08-27T02:09:00.102Z WireGuard Loading configuration...
+2025-08-27T02:09:00.107Z WireGuard Configuration loaded.
+2025-08-27T02:09:00.108Z WireGuard Config saving...
+$ wg-quick down wg0
+2025-08-27T02:09:00.121Z WireGuard Config saved.
+$ wg-quick up wg0
+$ wg syncconf wg0 <(wg-quick strip wg0)
+2025-08-27T02:09:00.433Z WireGuard Config syncing...
+2025-08-27T02:09:00.478Z WireGuard Config synced.
+SIGTERM signal received.
+$ wg-quick down wg0
+2025-08-27T02:16:25.973Z Server Listening on http://0.0.0.0:51821
+2025-08-27T02:16:25.991Z WireGuard Loading configuration...
+2025-08-27T02:16:26.004Z WireGuard Configuration loaded.
+2025-08-27T02:16:26.006Z WireGuard Config saving...
+2025-08-27T02:16:26.016Z WireGuard Config saved.
+$ wg-quick down wg0
+$ wg-quick up wg0
+$ wg syncconf wg0 <(wg-quick strip wg0)
+2025-08-27T02:16:26.267Z WireGuard Config syncing...
+2025-08-27T02:16:26.311Z WireGuard Config synced.
+SIGTERM signal received.
+$ wg-quick down wg0
+2025-08-29T04:02:04.611Z Server Listening on http://0.0.0.0:51821
+2025-08-29T04:02:04.628Z WireGuard Loading configuration...
+2025-08-29T04:02:04.638Z WireGuard Configuration loaded.
+2025-08-29T04:02:04.638Z WireGuard Config saving...
+2025-08-29T04:02:04.644Z WireGuard Config saved.
+$ wg-quick down wg0
+$ wg-quick up wg0
+2025-08-29T04:02:04.868Z WireGuard Config syncing...
+$ wg syncconf wg0 <(wg-quick strip wg0)
+2025-08-29T04:02:04.920Z WireGuard Config synced.
+SIGTERM signal received.
+$ wg-quick down wg0
+2025-08-29T04:09:34.335Z Server Listening on http://0.0.0.0:51821
+2025-08-29T04:09:34.350Z WireGuard Loading configuration...
+2025-08-29T04:09:34.354Z WireGuard Configuration loaded.
+2025-08-29T04:09:34.355Z WireGuard Config saving...
+2025-08-29T04:09:34.357Z WireGuard Config saved.
+$ wg-quick down wg0
+$ wg-quick up wg0
+2025-08-29T04:09:34.604Z WireGuard Config syncing...
+$ wg syncconf wg0 <(wg-quick strip wg0)
+2025-08-29T04:09:34.657Z WireGuard Config synced.
+SIGTERM signal received.
+$ wg-quick down wg0
+2025-09-01T02:04:21.048Z Server Listening on http://0.0.0.0:51821
+2025-09-01T02:04:21.060Z WireGuard Loading configuration...
+2025-09-01T02:04:21.067Z WireGuard Configuration loaded.
+2025-09-01T02:04:21.068Z WireGuard Config saving...
+2025-09-01T02:04:21.077Z WireGuard Config saved.
+$ wg-quick down wg0
+$ wg-quick up wg0
+$ wg syncconf wg0 <(wg-quick strip wg0)
+2025-09-01T02:04:21.340Z WireGuard Config syncing...
+2025-09-01T02:04:21.386Z WireGuard Config synced.
+SIGTERM signal received.
+$ wg-quick down wg0
+2025-09-01T02:59:24.991Z Server Listening on http://0.0.0.0:51821
+2025-09-01T02:59:25.003Z WireGuard Loading configuration...
+2025-09-01T02:59:25.010Z WireGuard Configuration loaded.
+2025-09-01T02:59:25.010Z WireGuard Config saving...
+2025-09-01T02:59:25.014Z WireGuard Config saved.
+$ wg-quick down wg0
+$ wg-quick up wg0
+$ wg syncconf wg0 <(wg-quick strip wg0)
+2025-09-01T02:59:25.211Z WireGuard Config syncing...
+2025-09-01T02:59:25.248Z WireGuard Config synced.
+SIGTERM signal received.
+$ wg-quick down wg0
+2025-09-01T03:01:58.490Z Server Listening on http://0.0.0.0:51821
+2025-09-01T03:01:58.507Z WireGuard Loading configuration...
+2025-09-01T03:01:58.518Z WireGuard Configuration loaded.
+2025-09-01T03:01:58.519Z WireGuard Config saving...
+2025-09-01T03:01:58.530Z WireGuard Config saved.
+$ wg-quick down wg0
+$ wg-quick up wg0
+2025-09-01T03:01:58.747Z WireGuard Config syncing...
+$ wg syncconf wg0 <(wg-quick strip wg0)
+2025-09-01T03:01:58.787Z WireGuard Config synced.
+SIGTERM signal received.
+$ wg-quick down wg0
+2025-09-01T03:07:28.744Z Server Listening on http://0.0.0.0:51821
+2025-09-01T03:07:28.758Z WireGuard Loading configuration...
+2025-09-01T03:07:28.762Z WireGuard Configuration loaded.
+2025-09-01T03:07:28.762Z WireGuard Config saving...
+2025-09-01T03:07:28.764Z WireGuard Config saved.
+$ wg-quick down wg0
+$ wg-quick up wg0
+$ wg syncconf wg0 <(wg-quick strip wg0)
+2025-09-01T03:07:28.933Z WireGuard Config syncing...
+2025-09-01T03:07:28.979Z WireGuard Config synced.
+SIGTERM signal received.
+$ wg-quick down wg0
+2025-09-01T03:31:34.669Z Server Listening on http://0.0.0.0:51821
+2025-09-01T03:31:34.684Z WireGuard Loading configuration...
+2025-09-01T03:31:34.691Z WireGuard Configuration loaded.
+2025-09-01T03:31:34.691Z WireGuard Config saving...
+2025-09-01T03:31:34.697Z WireGuard Config saved.
+$ wg-quick down wg0
+$ wg-quick up wg0
+2025-09-01T03:31:34.910Z WireGuard Config syncing...
+$ wg syncconf wg0 <(wg-quick strip wg0)
+2025-09-01T03:31:34.959Z WireGuard Config synced.
+2025-09-03T13:07:28.855Z Server Listening on http://0.0.0.0:51821
+2025-09-03T13:07:28.865Z WireGuard Loading configuration...
+2025-09-03T13:07:28.868Z WireGuard Configuration loaded.
+2025-09-03T13:07:28.868Z WireGuard Config saving...
+2025-09-03T13:07:28.874Z WireGuard Config saved.
+$ wg-quick down wg0
+$ wg-quick up wg0
+2025-09-03T13:07:29.083Z WireGuard Config syncing...
+$ wg syncconf wg0 <(wg-quick strip wg0)
+2025-09-03T13:07:29.123Z WireGuard Config synced.
+SIGTERM signal received.
+$ wg-quick down wg0
+2025-09-05T02:10:41.894Z Server Listening on http://0.0.0.0:51821
+2025-09-05T02:10:41.910Z WireGuard Loading configuration...
+2025-09-05T02:10:41.920Z WireGuard Configuration loaded.
+2025-09-05T02:10:41.921Z WireGuard Config saving...
+2025-09-05T02:10:41.924Z WireGuard Config saved.
+$ wg-quick down wg0
+$ wg-quick up wg0
+$ wg syncconf wg0 <(wg-quick strip wg0)
+2025-09-05T02:10:42.129Z WireGuard Config syncing...
+2025-09-05T02:10:42.166Z WireGuard Config synced.
+SIGTERM signal received.
+$ wg-quick down wg0
+2025-09-05T02:22:29.372Z Server Listening on http://0.0.0.0:51821
+2025-09-05T02:22:29.388Z WireGuard Loading configuration...
+2025-09-05T02:22:29.400Z WireGuard Configuration loaded.
+2025-09-05T02:22:29.400Z WireGuard Config saving...
+2025-09-05T02:22:29.405Z WireGuard Config saved.
+$ wg-quick down wg0
+$ wg-quick up wg0
+2025-09-05T02:22:29.604Z WireGuard Config syncing...
+$ wg syncconf wg0 <(wg-quick strip wg0)
+2025-09-05T02:22:29.670Z WireGuard Config synced.

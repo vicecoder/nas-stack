@@ -1,0 +1,144 @@
+===== nas-flexget-1: inspect (resumen con jq) =====
+{
+  "Name": "/nas-flexget-1",
+  "State": {
+    "Status": "running",
+    "Running": true,
+    "Health": "n/a"
+  },
+  "RestartPolicy": "unless-stopped",
+  "Networks": [
+    "nas_default"
+  ],
+  "IPs": {
+    "nas_default": "172.19.0.3"
+  },
+  "Mounts": [
+    {
+      "Type": "bind",
+      "Source": "/DATA_NAS/datos/docker_data/flexget_config",
+      "Destination": "/config",
+      "RW": true
+    },
+    {
+      "Type": "bind",
+      "Source": "/DATA_NAS/datos/docker_data/flexget_config/config-trakt.yml",
+      "Destination": "/config/config-trakt.yml",
+      "RW": true
+    },
+    {
+      "Type": "bind",
+      "Source": "/opt/lsio-flexget-init/mediainfo.sh",
+      "Destination": "/custom-cont-init.d/mediainfo.sh",
+      "RW": false
+    },
+    {
+      "Type": "bind",
+      "Source": "/DATA_NAS/datos/docker_data/torrents",
+      "Destination": "/downloads",
+      "RW": true
+    },
+    {
+      "Type": "bind",
+      "Source": "/DATA_NAS/datos/media",
+      "Destination": "/storage",
+      "RW": true
+    },
+    {
+      "Type": "volume",
+      "Source": "/var/lib/docker/volumes/8999ba649ffa41d5e56d301bf788509e878f7b751e00940179a640718bb6dc18/_data",
+      "Destination": "/data",
+      "RW": true
+    }
+  ]
+}
+
+===== nas-flexget-1: logs (últ. 200 líneas) =====
+[custom-init] No custom services found, skipping...
+[migrations] started
+[migrations] no migrations found
+───────────────────────────────────────
+  _____ __ __ _____ _____ _____ _____ 
+ |     |  |  |   __|_   _|     |     |
+ |   --|  |  |__   | | | |  |  | | | |
+ |_____|_____|_____| |_| |_____|_|_|_|
+       _____ __ __ _ __    ____  
+      | __  |  |  | |  |  |    \ 
+      | __ -|  |  | |  |__|  |  |
+      |_____|_____|_|_____|____/ 
+
+  Based on images from linuxserver.io
+───────────────────────────────────────
+
+To support LSIO projects visit:
+https://www.linuxserver.io/donate/
+
+───────────────────────────────────────
+GID/UID
+───────────────────────────────────────
+
+User UID:    1000
+User GID:    1000
+───────────────────────────────────────
+
+*** Using existing config.yml
+*** Setting flexget web password
+Updated password
+*** Flexget v3.5.36 ready!
+[custom-init] Files found, executing
+[custom-init] mediainfo.sh: executing...
+[custom-init] mediainfo.sh: exited 0
+*** Executing => flexget -c /config/config.yml --loglevel info --logfile flexget.log daemon start --autoreload-config
+[ls.io-init] done.
+2025-09-06 15:21:46 INFO     web_server_daemon                 Running web server at IP 0.0.0.0:5050
+2025-09-06 15:21:46 INFO     web_server_daemon                 Initiating API
+2025-09-06 15:21:46 INFO     web_server_daemon                 Registering WebUI v2
+2025-09-06 15:21:46 INFO     web_server                    Web server started at http://172.19.0.3:5050
+2025-09-06 15:21:46 INFO     scheduler                     Starting scheduler
+2025-09-06 15:21:46 INFO     web_server                    API available at http://172.19.0.3:5050/api
+2025-09-06 15:21:46 INFO     web_server                    WebUI (v2) available at http://172.19.0.3:5050/
+2025-09-06 15:27:56 INFO     manager       eztvrss         Running database cleanup.
+2025-09-06 15:27:56 INFO     db_analyze    eztvrss         Running ANALYZE on database to improve performance.
+2025-09-06 15:27:56 INFO     db_vacuum     eztvrss         Running VACUUM on database to improve performance and decrease db size.
+2025-09-06 15:27:58 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-06 15:57:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-06 16:27:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-06 16:57:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-06 17:27:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-06 17:57:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-06 18:27:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-06 18:57:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-06 19:27:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-06 19:57:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-06 20:27:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-06 20:57:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-06 21:27:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-06 21:57:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-06 22:27:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-06 22:57:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-06 23:27:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-06 23:57:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-07 00:27:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-07 00:57:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-07 01:27:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-07 01:57:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-07 02:27:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-07 02:57:58 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-07 03:27:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-07 03:57:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-07 04:27:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-07 04:57:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-07 05:27:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-07 05:57:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-07 06:27:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-07 06:57:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-07 07:27:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-07 07:57:58 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-07 08:27:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-07 08:57:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-07 09:27:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-07 09:57:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-07 10:27:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-07 10:57:58 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-07 11:27:57 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.
+2025-09-07 11:57:58 WARNING  details       remove_stale_torrents Task didn't produce any entries. This is likely due to a mis-configured or non-functional input.

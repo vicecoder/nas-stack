@@ -1,0 +1,4 @@
+===== samba: inspect (resumen con jq) =====
+
+===== samba: logs (últ. 200 líneas) =====
+Error response from daemon: No such container: samba

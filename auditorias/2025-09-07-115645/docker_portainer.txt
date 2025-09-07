@@ -1,0 +1,232 @@
+===== portainer: inspect (resumen con jq) =====
+{
+  "Name": "/portainer",
+  "State": {
+    "Status": "running",
+    "Running": true,
+    "Health": "n/a"
+  },
+  "RestartPolicy": "always",
+  "Networks": [
+    "bridge"
+  ],
+  "IPs": {
+    "bridge": "172.17.0.2"
+  },
+  "Mounts": [
+    {
+      "Type": "volume",
+      "Source": "/var/lib/docker/volumes/portainer_data/_data",
+      "Destination": "/data",
+      "RW": true
+    },
+    {
+      "Type": "bind",
+      "Source": "/var/run/docker.sock",
+      "Destination": "/var/run/docker.sock",
+      "RW": true
+    }
+  ]
+}
+
+===== portainer: logs (últ. 200 líneas) =====
+[90m2025/05/22 02:50AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:347[0m[36m >[0m starting HTTP server | [36mbind_address=[0m:9000
+[90m2025/05/22 02:50AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:363[0m[36m >[0m starting HTTPS server | [36mbind_address=[0m:9443
+[90m2025/05/22 06:53PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:310[0m[36m >[0m encryption key file not present | [36mfilename=[0mportainer
+[90m2025/05/22 06:53PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:334[0m[36m >[0m proceeding without encryption key |
+[90m2025/05/22 06:53PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/database/boltdb/db.go:133[0m[36m >[0m loading PortainerDB | [36mfilename=[0mportainer.db
+[90m2025/05/22 06:53PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/chisel/service.go:200[0m[36m >[0m found Chisel private key file on disk | [36mprivate-key=[0m/data/chisel/private-key.pem
+2025/05/22 18:53:07 server: Reverse tunnelling enabled
+2025/05/22 18:53:07 server: Fingerprint +vZtytLdCZWJ8no8Ps1c/cuyGkmIDNdwtyxtNzo82yk=
+2025/05/22 18:53:07 server: Listening on http://0.0.0.0:8000
+[90m2025/05/22 06:53PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/datastore/postinit/migrate_post_init.go:101[0m[36m >[0m Executing post init migration for environment 2 |
+[90m2025/05/22 06:53PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:601[0m[36m >[0m starting Portainer | [36mbuild_number=[0m164 [36mgo_version=[0m1.23.5 [36mimage_tag=[0m2.27.1-linux-arm64 [36mnodejs_version=[0m18.20.7 [36mversion=[0m2.27.1 [36mwebpack_version=[0m5.88.2 [36myarn_version=[0m1.22.22
+[90m2025/05/22 06:53PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:363[0m[36m >[0m starting HTTPS server | [36mbind_address=[0m:9443
+[90m2025/05/22 06:53PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:347[0m[36m >[0m starting HTTP server | [36mbind_address=[0m:9000
+[90m2025/05/22 06:58PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:310[0m[36m >[0m encryption key file not present | [36mfilename=[0mportainer
+[90m2025/05/22 06:58PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:334[0m[36m >[0m proceeding without encryption key |
+[90m2025/05/22 06:58PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/database/boltdb/db.go:133[0m[36m >[0m loading PortainerDB | [36mfilename=[0mportainer.db
+[90m2025/05/22 06:58PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/chisel/service.go:200[0m[36m >[0m found Chisel private key file on disk | [36mprivate-key=[0m/data/chisel/private-key.pem
+2025/05/22 18:58:38 server: Reverse tunnelling enabled
+2025/05/22 18:58:38 server: Fingerprint +vZtytLdCZWJ8no8Ps1c/cuyGkmIDNdwtyxtNzo82yk=
+2025/05/22 18:58:38 server: Listening on http://0.0.0.0:8000
+[90m2025/05/22 06:58PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/datastore/postinit/migrate_post_init.go:101[0m[36m >[0m Executing post init migration for environment 2 |
+[90m2025/05/22 06:58PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:601[0m[36m >[0m starting Portainer | [36mbuild_number=[0m164 [36mgo_version=[0m1.23.5 [36mimage_tag=[0m2.27.1-linux-arm64 [36mnodejs_version=[0m18.20.7 [36mversion=[0m2.27.1 [36mwebpack_version=[0m5.88.2 [36myarn_version=[0m1.22.22
+[90m2025/05/22 06:58PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:363[0m[36m >[0m starting HTTPS server | [36mbind_address=[0m:9443
+[90m2025/05/22 06:58PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:347[0m[36m >[0m starting HTTP server | [36mbind_address=[0m:9000
+[90m2025/06/07 03:32PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:310[0m[36m >[0m encryption key file not present | [36mfilename=[0mportainer
+[90m2025/06/07 03:32PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:334[0m[36m >[0m proceeding without encryption key |
+[90m2025/06/07 03:32PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/database/boltdb/db.go:133[0m[36m >[0m loading PortainerDB | [36mfilename=[0mportainer.db
+[90m2025/06/07 03:32PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/chisel/service.go:200[0m[36m >[0m found Chisel private key file on disk | [36mprivate-key=[0m/data/chisel/private-key.pem
+2025/06/07 15:32:31 server: Reverse tunnelling enabled
+2025/06/07 15:32:31 server: Fingerprint +vZtytLdCZWJ8no8Ps1c/cuyGkmIDNdwtyxtNzo82yk=
+2025/06/07 15:32:31 server: Listening on http://0.0.0.0:8000
+[90m2025/06/07 03:32PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/datastore/postinit/migrate_post_init.go:101[0m[36m >[0m Executing post init migration for environment 2 |
+[90m2025/06/07 03:32PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:601[0m[36m >[0m starting Portainer | [36mbuild_number=[0m164 [36mgo_version=[0m1.23.5 [36mimage_tag=[0m2.27.1-linux-arm64 [36mnodejs_version=[0m18.20.7 [36mversion=[0m2.27.1 [36mwebpack_version=[0m5.88.2 [36myarn_version=[0m1.22.22
+[90m2025/06/07 03:32PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:347[0m[36m >[0m starting HTTP server | [36mbind_address=[0m:9000
+[90m2025/06/07 03:32PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:363[0m[36m >[0m starting HTTPS server | [36mbind_address=[0m:9443
+[90m2025/06/16 02:40AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:310[0m[36m >[0m encryption key file not present | [36mfilename=[0mportainer
+[90m2025/06/16 02:40AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:334[0m[36m >[0m proceeding without encryption key |
+[90m2025/06/16 02:40AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/database/boltdb/db.go:133[0m[36m >[0m loading PortainerDB | [36mfilename=[0mportainer.db
+[90m2025/06/16 02:40AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/chisel/service.go:200[0m[36m >[0m found Chisel private key file on disk | [36mprivate-key=[0m/data/chisel/private-key.pem
+2025/06/16 02:40:01 server: Reverse tunnelling enabled
+2025/06/16 02:40:01 server: Fingerprint +vZtytLdCZWJ8no8Ps1c/cuyGkmIDNdwtyxtNzo82yk=
+2025/06/16 02:40:01 server: Listening on http://0.0.0.0:8000
+[90m2025/06/16 02:40AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/datastore/postinit/migrate_post_init.go:101[0m[36m >[0m Executing post init migration for environment 2 |
+[90m2025/06/16 02:40AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:601[0m[36m >[0m starting Portainer | [36mbuild_number=[0m164 [36mgo_version=[0m1.23.5 [36mimage_tag=[0m2.27.1-linux-arm64 [36mnodejs_version=[0m18.20.7 [36mversion=[0m2.27.1 [36mwebpack_version=[0m5.88.2 [36myarn_version=[0m1.22.22
+[90m2025/06/16 02:40AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:363[0m[36m >[0m starting HTTPS server | [36mbind_address=[0m:9443
+[90m2025/06/16 02:40AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:347[0m[36m >[0m starting HTTP server | [36mbind_address=[0m:9000
+[90m2025/06/21 05:05PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:310[0m[36m >[0m encryption key file not present | [36mfilename=[0mportainer
+[90m2025/06/21 05:05PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:334[0m[36m >[0m proceeding without encryption key |
+[90m2025/06/21 05:05PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/database/boltdb/db.go:133[0m[36m >[0m loading PortainerDB | [36mfilename=[0mportainer.db
+[90m2025/06/21 05:05PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/chisel/service.go:200[0m[36m >[0m found Chisel private key file on disk | [36mprivate-key=[0m/data/chisel/private-key.pem
+2025/06/21 17:05:02 server: Reverse tunnelling enabled
+2025/06/21 17:05:02 server: Fingerprint +vZtytLdCZWJ8no8Ps1c/cuyGkmIDNdwtyxtNzo82yk=
+2025/06/21 17:05:02 server: Listening on http://0.0.0.0:8000
+[90m2025/06/21 05:05PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/datastore/postinit/migrate_post_init.go:101[0m[36m >[0m Executing post init migration for environment 2 |
+[90m2025/06/21 05:05PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:601[0m[36m >[0m starting Portainer | [36mbuild_number=[0m164 [36mgo_version=[0m1.23.5 [36mimage_tag=[0m2.27.1-linux-arm64 [36mnodejs_version=[0m18.20.7 [36mversion=[0m2.27.1 [36mwebpack_version=[0m5.88.2 [36myarn_version=[0m1.22.22
+[90m2025/06/21 05:05PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:347[0m[36m >[0m starting HTTP server | [36mbind_address=[0m:9000
+[90m2025/06/21 05:05PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:363[0m[36m >[0m starting HTTPS server | [36mbind_address=[0m:9443
+[90m2025/08/20 02:14AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:310[0m[36m >[0m encryption key file not present | [36mfilename=[0mportainer
+[90m2025/08/20 02:14AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:334[0m[36m >[0m proceeding without encryption key |
+[90m2025/08/20 02:14AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/database/boltdb/db.go:133[0m[36m >[0m loading PortainerDB | [36mfilename=[0mportainer.db
+[90m2025/08/20 02:14AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/chisel/service.go:200[0m[36m >[0m found Chisel private key file on disk | [36mprivate-key=[0m/data/chisel/private-key.pem
+2025/08/20 02:14:32 server: Reverse tunnelling enabled
+2025/08/20 02:14:32 server: Fingerprint +vZtytLdCZWJ8no8Ps1c/cuyGkmIDNdwtyxtNzo82yk=
+2025/08/20 02:14:32 server: Listening on http://0.0.0.0:8000
+[90m2025/08/20 02:14AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/datastore/postinit/migrate_post_init.go:101[0m[36m >[0m Executing post init migration for environment 2 |
+[90m2025/08/20 02:14AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:601[0m[36m >[0m starting Portainer | [36mbuild_number=[0m164 [36mgo_version=[0m1.23.5 [36mimage_tag=[0m2.27.1-linux-arm64 [36mnodejs_version=[0m18.20.7 [36mversion=[0m2.27.1 [36mwebpack_version=[0m5.88.2 [36myarn_version=[0m1.22.22
+[90m2025/08/20 02:14AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:347[0m[36m >[0m starting HTTP server | [36mbind_address=[0m:9000
+[90m2025/08/20 02:14AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:363[0m[36m >[0m starting HTTPS server | [36mbind_address=[0m:9443
+[90m2025/08/27 02:08AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:310[0m[36m >[0m encryption key file not present | [36mfilename=[0mportainer
+[90m2025/08/27 02:08AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:334[0m[36m >[0m proceeding without encryption key |
+[90m2025/08/27 02:08AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/database/boltdb/db.go:133[0m[36m >[0m loading PortainerDB | [36mfilename=[0mportainer.db
+[90m2025/08/27 02:08AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/chisel/service.go:200[0m[36m >[0m found Chisel private key file on disk | [36mprivate-key=[0m/data/chisel/private-key.pem
+2025/08/27 02:08:59 server: Reverse tunnelling enabled
+2025/08/27 02:08:59 server: Fingerprint +vZtytLdCZWJ8no8Ps1c/cuyGkmIDNdwtyxtNzo82yk=
+2025/08/27 02:08:59 server: Listening on http://0.0.0.0:8000
+[90m2025/08/27 02:08AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/datastore/postinit/migrate_post_init.go:101[0m[36m >[0m Executing post init migration for environment 2 |
+[90m2025/08/27 02:08AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:601[0m[36m >[0m starting Portainer | [36mbuild_number=[0m164 [36mgo_version=[0m1.23.5 [36mimage_tag=[0m2.27.1-linux-arm64 [36mnodejs_version=[0m18.20.7 [36mversion=[0m2.27.1 [36mwebpack_version=[0m5.88.2 [36myarn_version=[0m1.22.22
+[90m2025/08/27 02:08AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:347[0m[36m >[0m starting HTTP server | [36mbind_address=[0m:9000
+[90m2025/08/27 02:08AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:363[0m[36m >[0m starting HTTPS server | [36mbind_address=[0m:9443
+[90m2025/08/27 02:16AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:310[0m[36m >[0m encryption key file not present | [36mfilename=[0mportainer
+[90m2025/08/27 02:16AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:334[0m[36m >[0m proceeding without encryption key |
+[90m2025/08/27 02:16AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/database/boltdb/db.go:133[0m[36m >[0m loading PortainerDB | [36mfilename=[0mportainer.db
+[90m2025/08/27 02:16AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/chisel/service.go:200[0m[36m >[0m found Chisel private key file on disk | [36mprivate-key=[0m/data/chisel/private-key.pem
+2025/08/27 02:16:25 server: Reverse tunnelling enabled
+2025/08/27 02:16:25 server: Fingerprint +vZtytLdCZWJ8no8Ps1c/cuyGkmIDNdwtyxtNzo82yk=
+2025/08/27 02:16:25 server: Listening on http://0.0.0.0:8000
+[90m2025/08/27 02:16AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/datastore/postinit/migrate_post_init.go:101[0m[36m >[0m Executing post init migration for environment 2 |
+[90m2025/08/27 02:16AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:601[0m[36m >[0m starting Portainer | [36mbuild_number=[0m164 [36mgo_version=[0m1.23.5 [36mimage_tag=[0m2.27.1-linux-arm64 [36mnodejs_version=[0m18.20.7 [36mversion=[0m2.27.1 [36mwebpack_version=[0m5.88.2 [36myarn_version=[0m1.22.22
+[90m2025/08/27 02:16AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:347[0m[36m >[0m starting HTTP server | [36mbind_address=[0m:9000
+[90m2025/08/27 02:16AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:363[0m[36m >[0m starting HTTPS server | [36mbind_address=[0m:9443
+[90m2025/08/29 04:02AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:310[0m[36m >[0m encryption key file not present | [36mfilename=[0mportainer
+[90m2025/08/29 04:02AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:334[0m[36m >[0m proceeding without encryption key |
+[90m2025/08/29 04:02AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/database/boltdb/db.go:133[0m[36m >[0m loading PortainerDB | [36mfilename=[0mportainer.db
+[90m2025/08/29 04:02AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/chisel/service.go:200[0m[36m >[0m found Chisel private key file on disk | [36mprivate-key=[0m/data/chisel/private-key.pem
+2025/08/29 04:02:03 server: Reverse tunnelling enabled
+2025/08/29 04:02:03 server: Fingerprint +vZtytLdCZWJ8no8Ps1c/cuyGkmIDNdwtyxtNzo82yk=
+2025/08/29 04:02:03 server: Listening on http://0.0.0.0:8000
+[90m2025/08/29 04:02AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/datastore/postinit/migrate_post_init.go:101[0m[36m >[0m Executing post init migration for environment 2 |
+[90m2025/08/29 04:02AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:601[0m[36m >[0m starting Portainer | [36mbuild_number=[0m164 [36mgo_version=[0m1.23.5 [36mimage_tag=[0m2.27.1-linux-arm64 [36mnodejs_version=[0m18.20.7 [36mversion=[0m2.27.1 [36mwebpack_version=[0m5.88.2 [36myarn_version=[0m1.22.22
+[90m2025/08/29 04:02AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:347[0m[36m >[0m starting HTTP server | [36mbind_address=[0m:9000
+[90m2025/08/29 04:02AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:363[0m[36m >[0m starting HTTPS server | [36mbind_address=[0m:9443
+[90m2025/08/29 04:09AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:310[0m[36m >[0m encryption key file not present | [36mfilename=[0mportainer
+[90m2025/08/29 04:09AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:334[0m[36m >[0m proceeding without encryption key |
+[90m2025/08/29 04:09AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/database/boltdb/db.go:133[0m[36m >[0m loading PortainerDB | [36mfilename=[0mportainer.db
+[90m2025/08/29 04:09AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/chisel/service.go:200[0m[36m >[0m found Chisel private key file on disk | [36mprivate-key=[0m/data/chisel/private-key.pem
+2025/08/29 04:09:33 server: Reverse tunnelling enabled
+2025/08/29 04:09:33 server: Fingerprint +vZtytLdCZWJ8no8Ps1c/cuyGkmIDNdwtyxtNzo82yk=
+2025/08/29 04:09:33 server: Listening on http://0.0.0.0:8000
+[90m2025/08/29 04:09AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/datastore/postinit/migrate_post_init.go:101[0m[36m >[0m Executing post init migration for environment 2 |
+[90m2025/08/29 04:09AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:601[0m[36m >[0m starting Portainer | [36mbuild_number=[0m164 [36mgo_version=[0m1.23.5 [36mimage_tag=[0m2.27.1-linux-arm64 [36mnodejs_version=[0m18.20.7 [36mversion=[0m2.27.1 [36mwebpack_version=[0m5.88.2 [36myarn_version=[0m1.22.22
+[90m2025/08/29 04:09AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:363[0m[36m >[0m starting HTTPS server | [36mbind_address=[0m:9443
+[90m2025/08/29 04:09AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:347[0m[36m >[0m starting HTTP server | [36mbind_address=[0m:9000
+[90m2025/09/01 02:04AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:310[0m[36m >[0m encryption key file not present | [36mfilename=[0mportainer
+[90m2025/09/01 02:04AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:334[0m[36m >[0m proceeding without encryption key |
+[90m2025/09/01 02:04AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/database/boltdb/db.go:133[0m[36m >[0m loading PortainerDB | [36mfilename=[0mportainer.db
+[90m2025/09/01 02:04AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/chisel/service.go:200[0m[36m >[0m found Chisel private key file on disk | [36mprivate-key=[0m/data/chisel/private-key.pem
+2025/09/01 02:04:20 server: Reverse tunnelling enabled
+2025/09/01 02:04:20 server: Fingerprint +vZtytLdCZWJ8no8Ps1c/cuyGkmIDNdwtyxtNzo82yk=
+2025/09/01 02:04:20 server: Listening on http://0.0.0.0:8000
+[90m2025/09/01 02:04AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/datastore/postinit/migrate_post_init.go:101[0m[36m >[0m Executing post init migration for environment 2 |
+[90m2025/09/01 02:04AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:601[0m[36m >[0m starting Portainer | [36mbuild_number=[0m164 [36mgo_version=[0m1.23.5 [36mimage_tag=[0m2.27.1-linux-arm64 [36mnodejs_version=[0m18.20.7 [36mversion=[0m2.27.1 [36mwebpack_version=[0m5.88.2 [36myarn_version=[0m1.22.22
+[90m2025/09/01 02:04AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:347[0m[36m >[0m starting HTTP server | [36mbind_address=[0m:9000
+[90m2025/09/01 02:04AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:363[0m[36m >[0m starting HTTPS server | [36mbind_address=[0m:9443
+[90m2025/09/01 02:59AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:310[0m[36m >[0m encryption key file not present | [36mfilename=[0mportainer
+[90m2025/09/01 02:59AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:334[0m[36m >[0m proceeding without encryption key |
+[90m2025/09/01 02:59AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/database/boltdb/db.go:133[0m[36m >[0m loading PortainerDB | [36mfilename=[0mportainer.db
+[90m2025/09/01 02:59AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/chisel/service.go:200[0m[36m >[0m found Chisel private key file on disk | [36mprivate-key=[0m/data/chisel/private-key.pem
+2025/09/01 02:59:24 server: Reverse tunnelling enabled
+2025/09/01 02:59:24 server: Fingerprint +vZtytLdCZWJ8no8Ps1c/cuyGkmIDNdwtyxtNzo82yk=
+2025/09/01 02:59:24 server: Listening on http://0.0.0.0:8000
+[90m2025/09/01 02:59AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/datastore/postinit/migrate_post_init.go:101[0m[36m >[0m Executing post init migration for environment 2 |
+[90m2025/09/01 02:59AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:601[0m[36m >[0m starting Portainer | [36mbuild_number=[0m164 [36mgo_version=[0m1.23.5 [36mimage_tag=[0m2.27.1-linux-arm64 [36mnodejs_version=[0m18.20.7 [36mversion=[0m2.27.1 [36mwebpack_version=[0m5.88.2 [36myarn_version=[0m1.22.22
+[90m2025/09/01 02:59AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:347[0m[36m >[0m starting HTTP server | [36mbind_address=[0m:9000
+[90m2025/09/01 02:59AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:363[0m[36m >[0m starting HTTPS server | [36mbind_address=[0m:9443
+[90m2025/09/01 03:01AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:310[0m[36m >[0m encryption key file not present | [36mfilename=[0mportainer
+[90m2025/09/01 03:01AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:334[0m[36m >[0m proceeding without encryption key |
+[90m2025/09/01 03:01AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/database/boltdb/db.go:133[0m[36m >[0m loading PortainerDB | [36mfilename=[0mportainer.db
+[90m2025/09/01 03:01AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/chisel/service.go:200[0m[36m >[0m found Chisel private key file on disk | [36mprivate-key=[0m/data/chisel/private-key.pem
+2025/09/01 03:01:57 server: Reverse tunnelling enabled
+2025/09/01 03:01:57 server: Fingerprint +vZtytLdCZWJ8no8Ps1c/cuyGkmIDNdwtyxtNzo82yk=
+2025/09/01 03:01:57 server: Listening on http://0.0.0.0:8000
+[90m2025/09/01 03:01AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/datastore/postinit/migrate_post_init.go:101[0m[36m >[0m Executing post init migration for environment 2 |
+[90m2025/09/01 03:01AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:601[0m[36m >[0m starting Portainer | [36mbuild_number=[0m164 [36mgo_version=[0m1.23.5 [36mimage_tag=[0m2.27.1-linux-arm64 [36mnodejs_version=[0m18.20.7 [36mversion=[0m2.27.1 [36mwebpack_version=[0m5.88.2 [36myarn_version=[0m1.22.22
+[90m2025/09/01 03:01AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:347[0m[36m >[0m starting HTTP server | [36mbind_address=[0m:9000
+[90m2025/09/01 03:01AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:363[0m[36m >[0m starting HTTPS server | [36mbind_address=[0m:9443
+[90m2025/09/01 03:07AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:310[0m[36m >[0m encryption key file not present | [36mfilename=[0mportainer
+[90m2025/09/01 03:07AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:334[0m[36m >[0m proceeding without encryption key |
+[90m2025/09/01 03:07AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/database/boltdb/db.go:133[0m[36m >[0m loading PortainerDB | [36mfilename=[0mportainer.db
+[90m2025/09/01 03:07AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/chisel/service.go:200[0m[36m >[0m found Chisel private key file on disk | [36mprivate-key=[0m/data/chisel/private-key.pem
+2025/09/01 03:07:28 server: Reverse tunnelling enabled
+2025/09/01 03:07:28 server: Fingerprint +vZtytLdCZWJ8no8Ps1c/cuyGkmIDNdwtyxtNzo82yk=
+2025/09/01 03:07:28 server: Listening on http://0.0.0.0:8000
+[90m2025/09/01 03:07AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/datastore/postinit/migrate_post_init.go:101[0m[36m >[0m Executing post init migration for environment 2 |
+[90m2025/09/01 03:07AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:601[0m[36m >[0m starting Portainer | [36mbuild_number=[0m164 [36mgo_version=[0m1.23.5 [36mimage_tag=[0m2.27.1-linux-arm64 [36mnodejs_version=[0m18.20.7 [36mversion=[0m2.27.1 [36mwebpack_version=[0m5.88.2 [36myarn_version=[0m1.22.22
+[90m2025/09/01 03:07AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:347[0m[36m >[0m starting HTTP server | [36mbind_address=[0m:9000
+[90m2025/09/01 03:07AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:363[0m[36m >[0m starting HTTPS server | [36mbind_address=[0m:9443
+[90m2025/09/01 03:31AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:310[0m[36m >[0m encryption key file not present | [36mfilename=[0mportainer
+[90m2025/09/01 03:31AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:334[0m[36m >[0m proceeding without encryption key |
+[90m2025/09/01 03:31AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/database/boltdb/db.go:133[0m[36m >[0m loading PortainerDB | [36mfilename=[0mportainer.db
+[90m2025/09/01 03:31AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/chisel/service.go:200[0m[36m >[0m found Chisel private key file on disk | [36mprivate-key=[0m/data/chisel/private-key.pem
+2025/09/01 03:31:34 server: Reverse tunnelling enabled
+2025/09/01 03:31:34 server: Fingerprint +vZtytLdCZWJ8no8Ps1c/cuyGkmIDNdwtyxtNzo82yk=
+2025/09/01 03:31:34 server: Listening on http://0.0.0.0:8000
+[90m2025/09/01 03:31AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/datastore/postinit/migrate_post_init.go:101[0m[36m >[0m Executing post init migration for environment 2 |
+[90m2025/09/01 03:31AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:601[0m[36m >[0m starting Portainer | [36mbuild_number=[0m164 [36mgo_version=[0m1.23.5 [36mimage_tag=[0m2.27.1-linux-arm64 [36mnodejs_version=[0m18.20.7 [36mversion=[0m2.27.1 [36mwebpack_version=[0m5.88.2 [36myarn_version=[0m1.22.22
+[90m2025/09/01 03:31AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:347[0m[36m >[0m starting HTTP server | [36mbind_address=[0m:9000
+[90m2025/09/01 03:31AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:363[0m[36m >[0m starting HTTPS server | [36mbind_address=[0m:9443
+[90m2025/09/03 01:07PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:310[0m[36m >[0m encryption key file not present | [36mfilename=[0mportainer
+[90m2025/09/03 01:07PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:334[0m[36m >[0m proceeding without encryption key |
+[90m2025/09/03 01:07PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/database/boltdb/db.go:133[0m[36m >[0m loading PortainerDB | [36mfilename=[0mportainer.db
+[90m2025/09/03 01:07PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/chisel/service.go:200[0m[36m >[0m found Chisel private key file on disk | [36mprivate-key=[0m/data/chisel/private-key.pem
+2025/09/03 13:07:28 server: Reverse tunnelling enabled
+2025/09/03 13:07:28 server: Fingerprint +vZtytLdCZWJ8no8Ps1c/cuyGkmIDNdwtyxtNzo82yk=
+2025/09/03 13:07:28 server: Listening on http://0.0.0.0:8000
+[90m2025/09/03 01:07PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/datastore/postinit/migrate_post_init.go:101[0m[36m >[0m Executing post init migration for environment 2 |
+[90m2025/09/03 01:07PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:601[0m[36m >[0m starting Portainer | [36mbuild_number=[0m164 [36mgo_version=[0m1.23.5 [36mimage_tag=[0m2.27.1-linux-arm64 [36mnodejs_version=[0m18.20.7 [36mversion=[0m2.27.1 [36mwebpack_version=[0m5.88.2 [36myarn_version=[0m1.22.22
+[90m2025/09/03 01:07PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:347[0m[36m >[0m starting HTTP server | [36mbind_address=[0m:9000
+[90m2025/09/03 01:07PM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:363[0m[36m >[0m starting HTTPS server | [36mbind_address=[0m:9443
+[90m2025/09/05 02:10AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:310[0m[36m >[0m encryption key file not present | [36mfilename=[0mportainer
+[90m2025/09/05 02:10AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:334[0m[36m >[0m proceeding without encryption key |
+[90m2025/09/05 02:10AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/database/boltdb/db.go:133[0m[36m >[0m loading PortainerDB | [36mfilename=[0mportainer.db
+[90m2025/09/05 02:10AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/chisel/service.go:200[0m[36m >[0m found Chisel private key file on disk | [36mprivate-key=[0m/data/chisel/private-key.pem
+2025/09/05 02:10:41 server: Reverse tunnelling enabled
+2025/09/05 02:10:41 server: Fingerprint +vZtytLdCZWJ8no8Ps1c/cuyGkmIDNdwtyxtNzo82yk=
+2025/09/05 02:10:41 server: Listening on http://0.0.0.0:8000
+[90m2025/09/05 02:10AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/datastore/postinit/migrate_post_init.go:101[0m[36m >[0m Executing post init migration for environment 2 |
+[90m2025/09/05 02:10AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:601[0m[36m >[0m starting Portainer | [36mbuild_number=[0m164 [36mgo_version=[0m1.23.5 [36mimage_tag=[0m2.27.1-linux-arm64 [36mnodejs_version=[0m18.20.7 [36mversion=[0m2.27.1 [36mwebpack_version=[0m5.88.2 [36myarn_version=[0m1.22.22
+[90m2025/09/05 02:10AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:363[0m[36m >[0m starting HTTPS server | [36mbind_address=[0m:9443
+[90m2025/09/05 02:10AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:347[0m[36m >[0m starting HTTP server | [36mbind_address=[0m:9000
+[90m2025/09/05 02:22AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:310[0m[36m >[0m encryption key file not present | [36mfilename=[0mportainer
+[90m2025/09/05 02:22AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:334[0m[36m >[0m proceeding without encryption key |
+[90m2025/09/05 02:22AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/database/boltdb/db.go:133[0m[36m >[0m loading PortainerDB | [36mfilename=[0mportainer.db
+[90m2025/09/05 02:22AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/chisel/service.go:200[0m[36m >[0m found Chisel private key file on disk | [36mprivate-key=[0m/data/chisel/private-key.pem
+2025/09/05 02:22:29 server: Reverse tunnelling enabled
+2025/09/05 02:22:29 server: Fingerprint +vZtytLdCZWJ8no8Ps1c/cuyGkmIDNdwtyxtNzo82yk=
+2025/09/05 02:22:29 server: Listening on http://0.0.0.0:8000
+[90m2025/09/05 02:22AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/datastore/postinit/migrate_post_init.go:101[0m[36m >[0m Executing post init migration for environment 2 |
+[90m2025/09/05 02:22AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/cmd/portainer/main.go:601[0m[36m >[0m starting Portainer | [36mbuild_number=[0m164 [36mgo_version=[0m1.23.5 [36mimage_tag=[0m2.27.1-linux-arm64 [36mnodejs_version=[0m18.20.7 [36mversion=[0m2.27.1 [36mwebpack_version=[0m5.88.2 [36myarn_version=[0m1.22.22
+[90m2025/09/05 02:22AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:363[0m[36m >[0m starting HTTPS server | [36mbind_address=[0m:9443
+[90m2025/09/05 02:22AM[0m [32mINF[0m [1mgithub.com/portainer/portainer/api/http/server.go:347[0m[36m >[0m starting HTTP server | [36mbind_address=[0m:9000

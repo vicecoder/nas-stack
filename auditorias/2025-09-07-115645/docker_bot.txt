@@ -1,0 +1,4 @@
+===== bot: inspect (resumen con jq) =====
+
+===== bot: logs (últ. 200 líneas) =====
+Error response from daemon: No such container: bot

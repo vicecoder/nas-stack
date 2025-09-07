@@ -1,0 +1,4 @@
+===== transmission: inspect (resumen con jq) =====
+
+===== transmission: logs (últ. 200 líneas) =====
+Error response from daemon: No such container: transmission
