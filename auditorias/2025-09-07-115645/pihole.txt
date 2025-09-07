@@ -1,0 +1,62 @@
+=== pihole status ===
+  [✓] FTL is listening on port 53
+     [✓] UDP (IPv4)
+     [✓] TCP (IPv4)
+     [✓] UDP (IPv6)
+     [✓] TCP (IPv6)
+
+  [✓] Pi-hole blocking is enabled
+
+=== dig @127.0.0.1 ===
+
+; <<>> DiG 9.18.33-1~deb12u2-Debian <<>> +time=2 +tries=1 A google.com @127.0.0.1
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 9185
+;; flags: qr rd ra; QUERY: 1, ANSWER: 6, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;google.com.			IN	A
+
+;; ANSWER SECTION:
+google.com.		296	IN	A	64.233.186.102
+google.com.		296	IN	A	64.233.186.100
+google.com.		296	IN	A	64.233.186.139
+google.com.		296	IN	A	64.233.186.138
+google.com.		296	IN	A	64.233.186.113
+google.com.		296	IN	A	64.233.186.101
+
+;; Query time: 47 msec
+;; SERVER: 127.0.0.1#53(127.0.0.1) (UDP)
+;; WHEN: Sun Sep 07 11:58:39 -05 2025
+;; MSG SIZE  rcvd: 135
+
+
+=== dig @192.168.1.10 ===
+
+; <<>> DiG 9.18.33-1~deb12u2-Debian <<>> +time=2 +tries=1 A google.com @192.168.1.10
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 63549
+;; flags: qr rd ra; QUERY: 1, ANSWER: 6, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;google.com.			IN	A
+
+;; ANSWER SECTION:
+google.com.		296	IN	A	64.233.186.102
+google.com.		296	IN	A	64.233.186.100
+google.com.		296	IN	A	64.233.186.139
+google.com.		296	IN	A	64.233.186.138
+google.com.		296	IN	A	64.233.186.113
+google.com.		296	IN	A	64.233.186.101
+
+;; Query time: 0 msec
+;; SERVER: 192.168.1.10#53(192.168.1.10) (UDP)
+;; WHEN: Sun Sep 07 11:58:39 -05 2025
+;; MSG SIZE  rcvd: 135
+

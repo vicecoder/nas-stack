@@ -1,0 +1,156 @@
+=== ip a ===
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 2c:cf:67:31:65:b4 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.10/24 brd 192.168.1.255 scope global noprefixroute eth0
+       valid_lft forever preferred_lft forever
+    inet6 2800:200:e4f0:d33:38bd:fa0:3309:83f2/64 scope global dynamic noprefixroute 
+       valid_lft 15387149sec preferred_lft 2427149sec
+    inet6 fe80::ffec:1dc3:9144:efb0/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc pfifo_fast state DOWN group default qlen 1000
+    link/ether 2c:cf:67:31:65:b5 brd ff:ff:ff:ff:ff:ff
+4: br-33ceae05a9b2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether c6:1c:35:8f:77:a2 brd ff:ff:ff:ff:ff:ff
+    inet 18.4.1.1/24 brd 18.4.1.255 scope global br-33ceae05a9b2
+       valid_lft forever preferred_lft forever
+    inet6 fe80::c41c:35ff:fe8f:77a2/64 scope link 
+       valid_lft forever preferred_lft forever
+5: br-5e56c1c7a6e7: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether 2a:64:74:88:46:60 brd ff:ff:ff:ff:ff:ff
+    inet 172.19.0.1/16 brd 172.19.255.255 scope global br-5e56c1c7a6e7
+       valid_lft forever preferred_lft forever
+    inet6 fe80::2864:74ff:fe88:4660/64 scope link 
+       valid_lft forever preferred_lft forever
+6: br-8d2840ab9d1c: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether ba:b4:64:32:e7:c6 brd ff:ff:ff:ff:ff:ff
+    inet 172.20.0.1/24 brd 172.20.0.255 scope global br-8d2840ab9d1c
+       valid_lft forever preferred_lft forever
+7: br-9883efc373e7: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether 62:eb:91:03:98:e5 brd ff:ff:ff:ff:ff:ff
+    inet 172.18.0.1/16 brd 172.18.255.255 scope global br-9883efc373e7
+       valid_lft forever preferred_lft forever
+    inet6 fe80::60eb:91ff:fe03:98e5/64 scope link 
+       valid_lft forever preferred_lft forever
+8: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether 96:26:60:6c:ee:da brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::9426:60ff:fe6c:eeda/64 scope link 
+       valid_lft forever preferred_lft forever
+9: veth15a8d90@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-33ceae05a9b2 state UP group default 
+    link/ether 5e:4d:32:17:e4:39 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet6 fe80::5c4d:32ff:fe17:e439/64 scope link 
+       valid_lft forever preferred_lft forever
+11: vethf8e52d1@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-9883efc373e7 state UP group default 
+    link/ether 56:0c:4d:f4:03:41 brd ff:ff:ff:ff:ff:ff link-netnsid 2
+    inet6 fe80::540c:4dff:fef4:341/64 scope link 
+       valid_lft forever preferred_lft forever
+12: vethc132fef@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-9883efc373e7 state UP group default 
+    link/ether 8e:ed:cf:4f:74:81 brd ff:ff:ff:ff:ff:ff link-netnsid 3
+    inet6 fe80::8ced:cfff:fe4f:7481/64 scope link 
+       valid_lft forever preferred_lft forever
+13: vethd0bbddf@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether 86:6d:9d:ce:fd:4b brd ff:ff:ff:ff:ff:ff link-netnsid 4
+    inet6 fe80::846d:9dff:fece:fd4b/64 scope link 
+       valid_lft forever preferred_lft forever
+14: vetha35f961@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-33ceae05a9b2 state UP group default 
+    link/ether e6:4a:dc:8f:c3:ca brd ff:ff:ff:ff:ff:ff link-netnsid 5
+    inet6 fe80::e44a:dcff:fe8f:c3ca/64 scope link 
+       valid_lft forever preferred_lft forever
+8777: veth4b6e1db@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-5e56c1c7a6e7 state UP group default 
+    link/ether d2:12:34:b0:ec:53 brd ff:ff:ff:ff:ff:ff link-netnsid 1
+    inet6 fe80::d012:34ff:feb0:ec53/64 scope link 
+       valid_lft forever preferred_lft forever
+8910: vethfbb8a41@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-5e56c1c7a6e7 state UP group default 
+    link/ether 8a:e3:37:36:7a:29 brd ff:ff:ff:ff:ff:ff link-netnsid 6
+    inet6 fe80::88e3:37ff:fe36:7a29/64 scope link 
+       valid_lft forever preferred_lft forever
+8912: vethc230006@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-5e56c1c7a6e7 state UP group default 
+    link/ether 72:18:87:51:1e:c3 brd ff:ff:ff:ff:ff:ff link-netnsid 7
+    inet6 fe80::7018:87ff:fe51:1ec3/64 scope link 
+       valid_lft forever preferred_lft forever
+
+=== rutas ===
+default via 192.168.1.1 dev eth0 proto dhcp src 192.168.1.10 metric 100 
+18.4.1.0/24 dev br-33ceae05a9b2 proto kernel scope link src 18.4.1.1 
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 
+172.18.0.0/16 dev br-9883efc373e7 proto kernel scope link src 172.18.0.1 
+172.19.0.0/16 dev br-5e56c1c7a6e7 proto kernel scope link src 172.19.0.1 
+172.20.0.0/24 dev br-8d2840ab9d1c proto kernel scope link src 172.20.0.1 linkdown 
+192.168.1.0/24 dev eth0 proto kernel scope link src 192.168.1.10 metric 100 
+
+=== resolvectl ===
+
+=== puertos abiertos ===
+Netid State  Recv-Q Send-Q               Local Address:Port  Peer Address:PortProcess                                       
+udp   UNCONN 0      0                          0.0.0.0:58914      0.0.0.0:*    users:(("avahi-daemon",pid=1019,fd=14))      
+udp   UNCONN 0      0                          0.0.0.0:1901       0.0.0.0:*    users:(("Plex Media Serv",pid=139227,fd=94)) 
+udp   UNCONN 0      0                          0.0.0.0:51413      0.0.0.0:*    users:(("docker-proxy",pid=1788907,fd=7))    
+udp   UNCONN 0      0                       172.20.0.1:35267      0.0.0.0:*    users:(("Plex Media Serv",pid=139227,fd=84)) 
+udp   UNCONN 0      0                     192.168.1.10:47700      0.0.0.0:*    users:(("Plex Media Serv",pid=139227,fd=81)) 
+udp   UNCONN 0      0                          0.0.0.0:51820      0.0.0.0:*    users:(("docker-proxy",pid=2373,fd=7))       
+udp   UNCONN 0      0                       172.18.0.1:55934      0.0.0.0:*    users:(("Plex Media Serv",pid=139227,fd=99)) 
+udp   UNCONN 0      0                        127.0.0.1:55979      0.0.0.0:*    users:(("Plex Media Serv",pid=139227,fd=87)) 
+udp   UNCONN 0      0                          0.0.0.0:60188      0.0.0.0:*    users:(("Plex Tuner Serv",pid=140083,fd=66)) 
+udp   UNCONN 0      0                     192.168.1.10:35666      0.0.0.0:*    users:(("Plex Media Serv",pid=139227,fd=95)) 
+udp   UNCONN 0      0                       172.19.0.1:60376      0.0.0.0:*    users:(("Plex Media Serv",pid=139227,fd=90)) 
+udp   UNCONN 0      0                     192.168.1.10:40052      0.0.0.0:*    users:(("Plex Media Serv",pid=139227,fd=88)) 
+udp   UNCONN 0      0                       172.19.0.1:56695      0.0.0.0:*    users:(("Plex Media Serv",pid=139227,fd=97)) 
+udp   UNCONN 0      0                         18.4.1.1:48592      0.0.0.0:*    users:(("Plex Media Serv",pid=139227,fd=96)) 
+udp   UNCONN 0      0                       172.18.0.1:52848      0.0.0.0:*    users:(("Plex Media Serv",pid=139227,fd=85)) 
+udp   UNCONN 0      0                          0.0.0.0:32410      0.0.0.0:*    users:(("Plex Media Serv",pid=139227,fd=76)) 
+udp   UNCONN 0      0                          0.0.0.0:32412      0.0.0.0:*    users:(("Plex Media Serv",pid=139227,fd=77)) 
+udp   UNCONN 0      0                          0.0.0.0:32413      0.0.0.0:*    users:(("Plex Media Serv",pid=139227,fd=79)) 
+udp   UNCONN 0      0                          0.0.0.0:32414      0.0.0.0:*    users:(("Plex Media Serv",pid=139227,fd=73)) 
+udp   UNCONN 0      0                       172.19.0.1:57366      0.0.0.0:*    users:(("Plex Media Serv",pid=139227,fd=83)) 
+udp   UNCONN 0      0                       172.17.0.1:53299      0.0.0.0:*    users:(("Plex Media Serv",pid=139227,fd=100))
+udp   UNCONN 0      0                          0.0.0.0:53         0.0.0.0:*    users:(("docker-proxy",pid=2494,fd=7))       
+udp   UNCONN 0      0                     192.168.1.10:137        0.0.0.0:*    users:(("docker-proxy",pid=1744651,fd=7))    
+udp   UNCONN 0      0                     192.168.1.10:138        0.0.0.0:*    users:(("docker-proxy",pid=1744657,fd=7))    
+udp   UNCONN 0      0                       172.17.0.1:45412      0.0.0.0:*    users:(("Plex Media Serv",pid=139227,fd=93)) 
+udp   UNCONN 0      0                         18.4.1.1:33397      0.0.0.0:*    users:(("Plex Media Serv",pid=139227,fd=89)) 
+udp   UNCONN 0      0                        127.0.0.1:45769      0.0.0.0:*    users:(("Plex Media Serv",pid=139227,fd=80)) 
+udp   UNCONN 0      0                       172.20.0.1:53986      0.0.0.0:*    users:(("Plex Media Serv",pid=139227,fd=98)) 
+udp   UNCONN 0      0                       172.18.0.1:50101      0.0.0.0:*    users:(("Plex Media Serv",pid=139227,fd=92)) 
+udp   UNCONN 0      0                       172.20.0.1:58450      0.0.0.0:*    users:(("Plex Media Serv",pid=139227,fd=91)) 
+udp   UNCONN 0      0                       172.17.0.1:50309      0.0.0.0:*    users:(("Plex Media Serv",pid=139227,fd=86)) 
+udp   UNCONN 0      0                          0.0.0.0:5353       0.0.0.0:*    users:(("avahi-daemon",pid=1019,fd=12))      
+udp   UNCONN 0      0                         18.4.1.1:46533      0.0.0.0:*    users:(("Plex Media Serv",pid=139227,fd=82)) 
+udp   UNCONN 0      0                                *:51413            *:*    users:(("docker-proxy",pid=1788913,fd=7))    
+udp   UNCONN 0      0                                *:39412            *:*    users:(("avahi-daemon",pid=1019,fd=15))      
+udp   UNCONN 0      0                                *:51820            *:*    users:(("docker-proxy",pid=2380,fd=7))       
+udp   UNCONN 0      0                                *:53               *:*    users:(("docker-proxy",pid=2501,fd=7))       
+udp   UNCONN 0      0      [fe80::ffec:1dc3:9144:efb0]:546              *:*    users:(("NetworkManager",pid=1067,fd=24))    
+udp   UNCONN 0      0                                *:5353             *:*    users:(("avahi-daemon",pid=1019,fd=13))      
+tcp   LISTEN 0      4096                       0.0.0.0:51413      0.0.0.0:*    users:(("docker-proxy",pid=1788893,fd=7))    
+tcp   LISTEN 0      4096                       0.0.0.0:51821      0.0.0.0:*    users:(("docker-proxy",pid=2389,fd=7))       
+tcp   LISTEN 0      4096                  192.168.1.10:445        0.0.0.0:*    users:(("docker-proxy",pid=1744671,fd=7))    
+tcp   LISTEN 0      1024                     127.0.0.1:32401      0.0.0.0:*    users:(("Plex Media Serv",pid=139227,fd=11)) 
+tcp   LISTEN 0      4096                  192.168.1.10:139        0.0.0.0:*    users:(("docker-proxy",pid=1744664,fd=7))    
+tcp   LISTEN 0      128                      127.0.0.1:32600      0.0.0.0:*    users:(("Plex Tuner Serv",pid=140083,fd=10)) 
+tcp   LISTEN 0      4096                  192.168.1.10:5050       0.0.0.0:*    users:(("docker-proxy",pid=1777633,fd=7))    
+tcp   LISTEN 0      4096                       0.0.0.0:8080       0.0.0.0:*    users:(("docker-proxy",pid=2294,fd=7))       
+tcp   LISTEN 0      4096                  192.168.1.10:9091       0.0.0.0:*    users:(("docker-proxy",pid=1788886,fd=7))    
+tcp   LISTEN 0      4096                       0.0.0.0:8000       0.0.0.0:*    users:(("docker-proxy",pid=2670,fd=7))       
+tcp   LISTEN 0      4096                       0.0.0.0:8443       0.0.0.0:*    users:(("docker-proxy",pid=2319,fd=7))       
+tcp   LISTEN 0      128                        0.0.0.0:22         0.0.0.0:*    users:(("sshd",pid=1199,fd=3))               
+tcp   LISTEN 0      4096                       0.0.0.0:53         0.0.0.0:*    users:(("docker-proxy",pid=2479,fd=7))       
+tcp   LISTEN 0      128                      127.0.0.1:34347      0.0.0.0:*    users:(("Plex Script Hos",pid=139348,fd=6))  
+tcp   LISTEN 0      4096                       0.0.0.0:5353       0.0.0.0:*    users:(("docker-proxy",pid=2510,fd=7))       
+tcp   LISTEN 0      4096                       0.0.0.0:9443       0.0.0.0:*    users:(("docker-proxy",pid=2690,fd=7))       
+tcp   LISTEN 0      4096                          [::]:51413         [::]:*    users:(("docker-proxy",pid=1788899,fd=7))    
+tcp   LISTEN 0      4096                          [::]:51821         [::]:*    users:(("docker-proxy",pid=2395,fd=7))       
+tcp   LISTEN 0      4096                          [::]:8080          [::]:*    users:(("docker-proxy",pid=2310,fd=7))       
+tcp   LISTEN 0      4096                          [::]:8000          [::]:*    users:(("docker-proxy",pid=2680,fd=7))       
+tcp   LISTEN 0      1024                             *:32400            *:*    users:(("Plex Media Serv",pid=139227,fd=10)) 
+tcp   LISTEN 0      4096                          [::]:8443          [::]:*    users:(("docker-proxy",pid=2326,fd=7))       
+tcp   LISTEN 0      128                           [::]:22            [::]:*    users:(("sshd",pid=1199,fd=4))               
+tcp   LISTEN 0      4096                          [::]:53            [::]:*    users:(("docker-proxy",pid=2486,fd=7))       
+tcp   LISTEN 0      4096                          [::]:5353          [::]:*    users:(("docker-proxy",pid=2517,fd=7))       
+tcp   LISTEN 0      4096                          [::]:9443          [::]:*    users:(("docker-proxy",pid=2696,fd=7))       

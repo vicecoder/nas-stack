@@ -1,0 +1,348 @@
+=== zpool status -v ===
+  pool: DATA_NAS
+ state: ONLINE
+  scan: resilvered 157M in 00:01:04 with 0 errors on Tue Sep  2 19:26:36 2025
+remove: Removal of vdev 1 copied 257G in 5h10m, completed on Sun Aug 31 18:23:12 2025
+	497K memory used for removed device mappings
+config:
+
+	NAME                              STATE     READ WRITE CKSUM
+	DATA_NAS                          ONLINE       0     0     0
+	  mirror-0                        ONLINE       0     0     0
+	    wwn-0x5000c500c8b5acf4-part2  ONLINE       0     0     0
+	    wwn-0x5000c5007980b9d2-part2  ONLINE       0     0     0
+
+errors: No known data errors
+
+=== zpool get all ===
+NAME      PROPERTY                       VALUE                          SOURCE
+DATA_NAS  size                           1.81T                          -
+DATA_NAS  capacity                       43%                            -
+DATA_NAS  altroot                        -                              default
+DATA_NAS  health                         ONLINE                         -
+DATA_NAS  guid                           16618533548083663763           -
+DATA_NAS  version                        -                              default
+DATA_NAS  bootfs                         -                              default
+DATA_NAS  delegation                     on                             default
+DATA_NAS  autoreplace                    off                            default
+DATA_NAS  cachefile                      -                              default
+DATA_NAS  failmode                       continue                       local
+DATA_NAS  listsnapshots                  off                            default
+DATA_NAS  autoexpand                     on                             local
+DATA_NAS  dedupratio                     1.00x                          -
+DATA_NAS  free                           1.03T                          -
+DATA_NAS  allocated                      802G                           -
+DATA_NAS  readonly                       off                            -
+DATA_NAS  ashift                         12                             local
+DATA_NAS  comment                        -                              default
+DATA_NAS  expandsize                     -                              -
+DATA_NAS  freeing                        0                              -
+DATA_NAS  fragmentation                  3%                             -
+DATA_NAS  leaked                         0                              -
+DATA_NAS  multihost                      off                            default
+DATA_NAS  checkpoint                     -                              -
+DATA_NAS  load_guid                      5808105612959793940            -
+DATA_NAS  autotrim                       off                            default
+DATA_NAS  compatibility                  off                            default
+DATA_NAS  bcloneused                     0                              -
+DATA_NAS  bclonesaved                    0                              -
+DATA_NAS  bcloneratio                    1.00x                          -
+DATA_NAS  dedup_table_size               0                              -
+DATA_NAS  dedup_table_quota              auto                           default
+DATA_NAS  last_scrubbed_txg              0                              -
+DATA_NAS  feature@async_destroy          enabled                        local
+DATA_NAS  feature@empty_bpobj            active                         local
+DATA_NAS  feature@lz4_compress           active                         local
+DATA_NAS  feature@multi_vdev_crash_dump  enabled                        local
+DATA_NAS  feature@spacemap_histogram     active                         local
+DATA_NAS  feature@enabled_txg            active                         local
+DATA_NAS  feature@hole_birth             active                         local
+DATA_NAS  feature@extensible_dataset     active                         local
+DATA_NAS  feature@embedded_data          active                         local
+DATA_NAS  feature@bookmarks              enabled                        local
+DATA_NAS  feature@filesystem_limits      enabled                        local
+DATA_NAS  feature@large_blocks           enabled                        local
+DATA_NAS  feature@large_dnode            enabled                        local
+DATA_NAS  feature@sha512                 enabled                        local
+DATA_NAS  feature@skein                  enabled                        local
+DATA_NAS  feature@edonr                  enabled                        local
+DATA_NAS  feature@userobj_accounting     active                         local
+DATA_NAS  feature@encryption             active                         local
+DATA_NAS  feature@project_quota          active                         local
+DATA_NAS  feature@device_removal         active                         local
+DATA_NAS  feature@obsolete_counts        active                         local
+DATA_NAS  feature@zpool_checkpoint       enabled                        local
+DATA_NAS  feature@spacemap_v2            active                         local
+DATA_NAS  feature@allocation_classes     enabled                        local
+DATA_NAS  feature@resilver_defer         enabled                        local
+DATA_NAS  feature@bookmark_v2            enabled                        local
+DATA_NAS  feature@redaction_bookmarks    enabled                        local
+DATA_NAS  feature@redacted_datasets      enabled                        local
+DATA_NAS  feature@bookmark_written       enabled                        local
+DATA_NAS  feature@log_spacemap           active                         local
+DATA_NAS  feature@livelist               enabled                        local
+DATA_NAS  feature@device_rebuild         enabled                        local
+DATA_NAS  feature@zstd_compress          enabled                        local
+DATA_NAS  feature@draid                  enabled                        local
+DATA_NAS  feature@zilsaxattr             active                         local
+DATA_NAS  feature@head_errlog            active                         local
+DATA_NAS  feature@blake3                 enabled                        local
+DATA_NAS  feature@block_cloning          enabled                        local
+DATA_NAS  feature@vdev_zaps_v2           active                         local
+DATA_NAS  feature@redaction_list_spill   enabled                        local
+DATA_NAS  feature@raidz_expansion        enabled                        local
+DATA_NAS  feature@fast_dedup             enabled                        local
+DATA_NAS  feature@longname               enabled                        local
+DATA_NAS  feature@large_microzap         enabled                        local
+
+=== zfs list ===
+NAME             USED  AVAIL  RATIO  ENCRYPTION   KEYSTATUS    MOUNTPOINT
+DATA_NAS         802G   997G  1.21x  aes-256-gcm  available    /DATA_NAS
+DATA_NAS/datos   802G   997G  1.21x  aes-256-gcm  available    /DATA_NAS/datos
+
+=== propiedades clave ===
+NAME                                 PROPERTY     VALUE                    SOURCE
+DATA_NAS                             encryption   aes-256-gcm              -
+DATA_NAS                             keylocation  file:///etc/zfs/zfs.key  local
+DATA_NAS                             keyformat    hex                      -
+DATA_NAS                             atime        off                      local
+DATA_NAS                             compression  lz4                      local
+DATA_NAS                             recordsize   128K                     default
+DATA_NAS                             acltype      off                      default
+DATA_NAS                             relatime     on                       default
+DATA_NAS/datos                       encryption   aes-256-gcm              -
+DATA_NAS/datos                       keylocation  none                     default
+DATA_NAS/datos                       keyformat    hex                      -
+DATA_NAS/datos                       atime        off                      local
+DATA_NAS/datos                       compression  lz4                      inherited from DATA_NAS
+DATA_NAS/datos                       recordsize   128K                     default
+DATA_NAS/datos                       acltype      posix                    local
+DATA_NAS/datos                       relatime     on                       default
+DATA_NAS/datos@auto-2025-09-06_1710  encryption   aes-256-gcm              -
+DATA_NAS/datos@auto-2025-09-06_1710  keylocation  -                        -
+DATA_NAS/datos@auto-2025-09-06_1710  keyformat    -                        -
+DATA_NAS/datos@auto-2025-09-06_1710  atime        -                        -
+DATA_NAS/datos@auto-2025-09-06_1710  compression  -                        -
+DATA_NAS/datos@auto-2025-09-06_1710  recordsize   -                        -
+DATA_NAS/datos@auto-2025-09-06_1710  acltype      posix                    inherited from DATA_NAS/datos
+DATA_NAS/datos@auto-2025-09-06_1710  relatime     -                        -
+DATA_NAS/datos@auto-2025-09-06_1721  encryption   aes-256-gcm              -
+DATA_NAS/datos@auto-2025-09-06_1721  keylocation  -                        -
+DATA_NAS/datos@auto-2025-09-06_1721  keyformat    -                        -
+DATA_NAS/datos@auto-2025-09-06_1721  atime        -                        -
+DATA_NAS/datos@auto-2025-09-06_1721  compression  -                        -
+DATA_NAS/datos@auto-2025-09-06_1721  recordsize   -                        -
+DATA_NAS/datos@auto-2025-09-06_1721  acltype      posix                    inherited from DATA_NAS/datos
+DATA_NAS/datos@auto-2025-09-06_1721  relatime     -                        -
+DATA_NAS/datos@auto-2025-09-07_0204  encryption   aes-256-gcm              -
+DATA_NAS/datos@auto-2025-09-07_0204  keylocation  -                        -
+DATA_NAS/datos@auto-2025-09-07_0204  keyformat    -                        -
+DATA_NAS/datos@auto-2025-09-07_0204  atime        -                        -
+DATA_NAS/datos@auto-2025-09-07_0204  compression  -                        -
+DATA_NAS/datos@auto-2025-09-07_0204  recordsize   -                        -
+DATA_NAS/datos@auto-2025-09-07_0204  acltype      posix                    inherited from DATA_NAS/datos
+DATA_NAS/datos@auto-2025-09-07_0204  relatime     -                        -
+
+=== snapshots ===
+
+=== eventos (200) ===
+        pool_guid = 0xe6a0e43695705393
+        pool_state = 0x0
+        pool_context = 0x0
+        history_hostname = "lzservrpi"
+        history_dsname = "DATA_NAS"
+        history_internal_str = "atime=0"
+        history_internal_name = "set"
+        history_dsid = 0x36
+        history_txg = 0x17d9ec
+        history_time = 0x68bd3283
+        time = 0x68bd3283 0x3ad4708 
+        eid = 0x29
+
+Sep  7 2025 03:12:23.808366885 sysevent.fs.zfs.history_event
+        version = 0x0
+        class = "sysevent.fs.zfs.history_event"
+        pool = "DATA_NAS"
+        pool_guid = 0xe6a0e43695705393
+        pool_state = 0x0
+        pool_context = 0x0
+        history_hostname = "lzservrpi"
+        history_dsname = "DATA_NAS/bench"
+        history_internal_str = " "
+        history_internal_name = "create"
+        history_dsid = 0x2302
+        history_txg = 0x17dc3f
+        history_time = 0x68bd3e67
+        time = 0x68bd3e67 0x302eb325 
+        eid = 0x2a
+
+Sep  7 2025 03:12:23.944366098 sysevent.fs.zfs.history_event
+        version = 0x0
+        class = "sysevent.fs.zfs.history_event"
+        pool = "DATA_NAS"
+        pool_guid = 0xe6a0e43695705393
+        pool_state = 0x0
+        pool_context = 0x0
+        history_hostname = "lzservrpi"
+        history_dsname = "DATA_NAS/bench"
+        history_internal_str = "mountpoint=/mnt/bench"
+        history_internal_name = "set"
+        history_dsid = 0x2302
+        history_txg = 0x17dc40
+        history_time = 0x68bd3e67
+        time = 0x68bd3e67 0x3849e212 
+        eid = 0x2b
+
+Sep  7 2025 03:12:23.944366098 sysevent.fs.zfs.history_event
+        version = 0x0
+        class = "sysevent.fs.zfs.history_event"
+        pool = "DATA_NAS"
+        pool_guid = 0xe6a0e43695705393
+        pool_state = 0x0
+        pool_context = 0x0
+        history_hostname = "lzservrpi"
+        history_dsname = "DATA_NAS/bench"
+        history_internal_str = "compression=2"
+        history_internal_name = "set"
+        history_dsid = 0x2302
+        history_txg = 0x17dc40
+        history_time = 0x68bd3e67
+        time = 0x68bd3e67 0x3849e212 
+        eid = 0x2c
+
+Sep  7 2025 03:12:23.944366098 sysevent.fs.zfs.history_event
+        version = 0x0
+        class = "sysevent.fs.zfs.history_event"
+        pool = "DATA_NAS"
+        pool_guid = 0xe6a0e43695705393
+        pool_state = 0x0
+        pool_context = 0x0
+        history_hostname = "lzservrpi"
+        history_dsname = "DATA_NAS/bench"
+        history_internal_str = "atime=0"
+        history_internal_name = "set"
+        history_dsid = 0x2302
+        history_txg = 0x17dc40
+        history_time = 0x68bd3e67
+        time = 0x68bd3e67 0x3849e212 
+        eid = 0x2d
+
+Sep  7 2025 03:12:23.944366098 sysevent.fs.zfs.history_event
+        version = 0x0
+        class = "sysevent.fs.zfs.history_event"
+        pool = "DATA_NAS"
+        pool_guid = 0xe6a0e43695705393
+        pool_state = 0x0
+        pool_context = 0x0
+        history_hostname = "lzservrpi"
+        history_dsname = "DATA_NAS/bench"
+        history_internal_str = "recordsize=1048576"
+        history_internal_name = "set"
+        history_dsid = 0x2302
+        history_txg = 0x17dc40
+        history_time = 0x68bd3e67
+        time = 0x68bd3e67 0x3849e212 
+        eid = 0x2e
+
+Sep  7 2025 03:12:23.944366098 sysevent.fs.zfs.history_event
+        version = 0x0
+        class = "sysevent.fs.zfs.history_event"
+        pool = "DATA_NAS"
+        pool_guid = 0xe6a0e43695705393
+        pool_state = 0x0
+        pool_context = 0x0
+        history_hostname = "lzservrpi"
+        history_dsname = "DATA_NAS/bench"
+        history_internal_str = "sync=0"
+        history_internal_name = "set"
+        history_dsid = 0x2302
+        history_txg = 0x17dc40
+        history_time = 0x68bd3e67
+        time = 0x68bd3e67 0x3849e212 
+        eid = 0x2f
+
+Sep  7 2025 03:12:24.096365219 sysevent.fs.zfs.history_event
+        version = 0x0
+        class = "sysevent.fs.zfs.history_event"
+        pool = "DATA_NAS"
+        pool_guid = 0xe6a0e43695705393
+        pool_state = 0x0
+        pool_context = 0x0
+        history_hostname = "lzservrpi"
+        history_dsname = "DATA_NAS/bench"
+        history_internal_str = "sync=1"
+        history_internal_name = "set"
+        history_dsid = 0x2302
+        history_txg = 0x17dc41
+        history_time = 0x68bd3e68
+        time = 0x68bd3e68 0x5be6aa3 
+        eid = 0x30
+
+Sep  7 2025 03:12:24.260364270 sysevent.fs.zfs.history_event
+        version = 0x0
+        class = "sysevent.fs.zfs.history_event"
+        pool = "DATA_NAS"
+        pool_guid = 0xe6a0e43695705393
+        pool_state = 0x0
+        pool_context = 0x0
+        history_hostname = "lzservrpi"
+        history_dsname = "DATA_NAS/bench"
+        history_internal_str = "sync=0"
+        history_internal_name = "set"
+        history_dsid = 0x2302
+        history_txg = 0x17dc42
+        history_time = 0x68bd3e68
+        time = 0x68bd3e68 0xf84d7ee 
+        eid = 0x31
+
+Sep  7 2025 03:17:05.110764421 sysevent.fs.zfs.history_event
+        version = 0x0
+        class = "sysevent.fs.zfs.history_event"
+        pool = "DATA_NAS"
+        pool_guid = 0xe6a0e43695705393
+        pool_state = 0x0
+        pool_context = 0x0
+        history_hostname = "lzservrpi"
+        history_dsname = "DATA_NAS/bench"
+        history_internal_str = "sync=1"
+        history_internal_name = "set"
+        history_dsid = 0x2302
+        history_txg = 0x17dc6c
+        history_time = 0x68bd3f81
+        time = 0x68bd3f81 0x69a2185 
+        eid = 0x32
+
+Sep  7 2025 03:18:06.494420191 sysevent.fs.zfs.history_event
+        version = 0x0
+        class = "sysevent.fs.zfs.history_event"
+        pool = "DATA_NAS"
+        pool_guid = 0xe6a0e43695705393
+        pool_state = 0x0
+        pool_context = 0x0
+        history_hostname = "lzservrpi"
+        history_dsname = "DATA_NAS/bench"
+        history_internal_str = "sync=0"
+        history_internal_name = "set"
+        history_dsid = 0x2302
+        history_txg = 0x17dc7a
+        history_time = 0x68bd3fbe
+        time = 0x68bd3fbe 0x1d7840df 
+        eid = 0x33
+
+Sep  7 2025 03:19:51.369835409 sysevent.fs.zfs.history_event
+        version = 0x0
+        class = "sysevent.fs.zfs.history_event"
+        pool = "DATA_NAS"
+        pool_guid = 0xe6a0e43695705393
+        pool_state = 0x0
+        pool_context = 0x0
+        history_hostname = "lzservrpi"
+        history_dsname = "DATA_NAS/bench"
+        history_internal_str = "(bptree, mintxg=1)"
+        history_internal_name = "destroy"
+        history_dsid = 0x2302
+        history_txg = 0x17dc90
+        history_time = 0x68bd4027
+        time = 0x68bd4027 0x160b3d91 
+        eid = 0x34
+

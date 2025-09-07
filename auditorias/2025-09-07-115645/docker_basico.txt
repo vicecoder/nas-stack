@@ -1,0 +1,192 @@
+=== version ===
+Client: Docker Engine - Community
+ Version:           28.3.3
+ API version:       1.51
+ Go version:        go1.24.5
+ Git commit:        980b856
+ Built:             Fri Jul 25 11:35:32 2025
+ OS/Arch:           linux/arm64
+ Context:           default
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          28.3.3
+  API version:      1.51 (minimum version 1.24)
+  Go version:       go1.24.5
+  Git commit:       bea959c
+  Built:            Fri Jul 25 11:35:32 2025
+  OS/Arch:          linux/arm64
+  Experimental:     false
+ containerd:
+  Version:          1.7.27
+  GitCommit:        05044ec0a9a75232cad458027ca83437aae3f4da
+ runc:
+  Version:          1.2.5
+  GitCommit:        v1.2.5-0-g59923ef
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+
+=== info ===
+Client: Docker Engine - Community
+ Version:    28.3.3
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.26.1
+    Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+  compose: Docker Compose (Docker Inc.)
+    Version:  v2.39.1
+    Path:     /usr/libexec/docker/cli-plugins/docker-compose
+
+Server:
+ Containers: 10
+  Running: 10
+  Paused: 0
+  Stopped: 0
+ Images: 11
+ Server Version: 28.3.3
+ Storage Driver: overlay2
+  Backing Filesystem: extfs
+  Supports d_type: true
+  Using metacopy: false
+  Native Overlay Diff: true
+  userxattr: false
+ Logging Driver: json-file
+ Cgroup Driver: systemd
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ CDI spec directories:
+  /etc/cdi
+  /var/run/cdi
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: 05044ec0a9a75232cad458027ca83437aae3f4da
+ runc version: v1.2.5-0-g59923ef
+ init version: de40ad0
+ Security Options:
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 6.12.34+rpt-rpi-2712
+ Operating System: Debian GNU/Linux 12 (bookworm)
+ OSType: linux
+ Architecture: aarch64
+ CPUs: 4
+ Total Memory: 7.87GiB
+ Name: lzservrpi
+ ID: 453e1219-a790-4cb9-baea-1ccbf353eae8
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ Experimental: false
+ Insecure Registries:
+  ::1/128
+  127.0.0.0/8
+ Live Restore Enabled: false
+
+
+=== ps -a ===
+NAMES                   STATUS                  PORTS                                                                                                                                         NETWORKS
+nas-transmission-1      Up 19 hours             192.168.1.10:9091->9091/tcp, 0.0.0.0:51413->51413/tcp, 0.0.0.0:51413->51413/udp, [::]:51413->51413/tcp, [::]:51413->51413/udp                 nas_default
+nas-flexget-1           Up 21 hours             192.168.1.10:5050->5050/tcp                                                                                                                   nas_default
+nas-samba-1             Up 22 hours (healthy)   192.168.1.10:139->139/tcp, 192.168.1.10:137-138->137-138/udp, 192.168.1.10:445->445/tcp                                                       nas_default
+nas-plex-1              Up 2 days                                                                                                                                                             host
+docker-controller-bot   Up 2 days                                                                                                                                                             host
+speedtest-tracker       Up 2 days               0.0.0.0:8080->80/tcp, [::]:8080->80/tcp, 0.0.0.0:8443->443/tcp, [::]:8443->443/tcp                                                            docker_default
+pihole                  Up 2 days (healthy)     67/udp, 0.0.0.0:53->53/tcp, 0.0.0.0:53->53/udp, [::]:53->53/tcp, [::]:53->53/udp, 123/udp, 443/tcp, 0.0.0.0:5353->80/tcp, [::]:5353->80/tcp   docker_wg-easy
+portainer               Up 2 days               0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp, 0.0.0.0:9443->9443/tcp, [::]:9443->9443/tcp, 9000/tcp                                            bridge
+duckdns                 Up 2 days                                                                                                                                                             docker_default
+wg-easy                 Up 2 days (healthy)     0.0.0.0:51820->51820/udp, [::]:51820->51820/udp, 0.0.0.0:51821->51821/tcp, [::]:51821->51821/tcp                                              docker_wg-easy
+
+=== networks ===
+NETWORK ID     NAME             DRIVER    SCOPE
+a13589e061c4   bridge           bridge    local
+9883efc373e7   docker_default   bridge    local
+33ceae05a9b2   docker_wg-easy   bridge    local
+33425f67da58   host             host      local
+5e56c1c7a6e7   nas_default      bridge    local
+749b8d145316   none             null      local
+8d2840ab9d1c   wp_containers    bridge    local
+
+=== volumes ===
+DRIVER    VOLUME NAME
+local     0d10953d9eb1bba4398f5eb0bf2b1dc8d8f613e067dec68d9478cb329e86c3f2
+local     1f39484c0acd7856c7a141ba893926bbdf6a72ecbc1322a7c6432fd5efc9e367
+local     2c659e252c518c6c3bdb4bd9b9445b7bfffc7209b9f736259a0a2fb48d804d2d
+local     005d1006a0303c30cbd7c030046cedb9bcebd015785b89f275312236aad64702
+local     6b016b82cc227813128583512a2ff1ef10db66465463f402f2b4944d9330199c
+local     7f0e73152a362832e8cdc2b77d2868b2abc60bba2d19342c9fce86b2ff87facc
+local     7fdfdd034eb70718b3f6d99716ddfc97ed995b5e86f0f7640c200bc9943598f5
+local     07bbeddadd2619dec5ecad8458cd4d94d20bdd386053f133cff787755de62a91
+local     8cb34a97d8780a60d0b2286fcf7b3380d34b55d944ba56c6c2144ae90e5b4cfa
+local     10c217fd908f4d109c2332eeea0cb3072c8a9ea143429cfd4a5767cc2a1b4762
+local     15cf01b9bc830a3d08b202d109b2c77a83502796ea95c335e84d0b3d7306be32
+local     28c14010a59386b42332b64cb8fb868e6529db12f0c1e1db5dc4f49411b5b1ad
+local     30ff9074cfd19e0491877938be8c959345553f47d3d6337e0553acb87bf2d807
+local     34fa5d37e64d457fe79a5e824a43d7ab45c1e2bdacda375368a7196992c2ee11
+local     35bb7e238ce705f1bc1cb0c01f89906e153b5b847c11c4231548e917d8d82258
+local     39d5fe0ebf630eebec95bfda24d52fd6976af3cf080e96424fdc284eda160c85
+local     44abde1783b331476c6ed3a00e239ad2dbbc44714d1c3daaf6fb51ff62e39a2c
+local     45fa40422ed9a9cf5f255f59378c999f0893eb74e6848ada822c46b3312530c6
+local     46bee1c024ac3894c6eb7c028dce65abba03d7464c962a502008f61103d7b1c3
+local     49cc740d910d8f35555a808570bb2fff9c18ad3e1d95b4f5a9134612cc32942c
+local     49eb686d71e68f120c8b63fb0f66eae63dd316e26ccd9c8b7115ad9ec1938378
+local     67a6cbd86ac96bf303f940215ae7c5a74ab4aa4253dd1e9041d2080edcf9ca9f
+local     68fd05ecabf76440552b03447bf8bfb0823ed04f4e641023b6d043c8debb227b
+local     82f869234ddc2c9b7f247db49148da00a711867aaecf38a6cdf38cb1feb21fff
+local     85c8e1d0aec1d9e3ca3d7f486485dc9eafde28a46282267363d0c3f4eacfe98c
+local     428a0fdcf659d4ea4928204b6e3319d4fbd070b78d257ebfeebcfbdc1c0c584b
+local     530e7b12545ff37782e32a983c714c39d20902e96234851af965173338c5d082
+local     582ae4fe8032f2fb078990c2cbc100519e0a353dd74b35585e183b32d1175cb8
+local     0664cdfc4d2769e386e9e77b587ac746a0d9d15eadaa16577a88c8e55a641bd5
+local     735cec21ac53ced8a16ce14626495019c50fbd99645e597a4fad41d805cb659b
+local     809aeb63545637104b4c185f33523db328f9d145f87c1de8ec3ce5c9452bddd5
+local     1853ab9b2772737ea91243e83df5afd626a75cf700ce296076dc2133f714ce1b
+local     2263a1142424b7b87c1e830921362166007e6b59b4998f6cdec573d8e1286265
+local     4076fe0aefb9b1176e9cd80a9500967d66879c7f1988e3720864df2e79050e0c
+local     7355f13d25c59f692b5aaa9d8075156fe354e811535c48c783912d33d6c758bf
+local     8999ba649ffa41d5e56d301bf788509e878f7b751e00940179a640718bb6dc18
+local     9564aecc3c77edce33862ea3419ba3c15c1fc7fd89d41c8da9cbb746efcf2c6e
+local     9598fd2aa9611b1d05b00aa2e977e3f1721f34046c9f81159a24d7fa64b7cd42
+local     83206abefa0fe6b928d588872041b653f26a3334b096acef6a1bbd8b4386b2f7
+local     134976fabac8540b8aeffaec3e188dcc2dd26e6534cdfd138dfe773858b91273
+local     619376f99b0751afc7bc82cb463a60b18733acc9261adb22f779432e47be0602
+local     1525182e54b3d58336308f7dbd834172b63b82bdb10d66895955d8ce79222b4e
+local     2879797fba76b465f39d223ebdd48192bde936331910be4f42eb0943cac9d979
+local     a1df3130336616dea17e59b39ee14db4b5fd9c2d2aae3575038e02b6fc43eecf
+local     a8988df5436ac57d315c554dd03c767e262a533f6a1aa6aa86fa30f3c48ce214
+local     a21704d8a3ef9b2f3528093e0abe8e9c62242be3958f4efc0bff95451d775f13
+local     adfc03bd530a8429abf3919b651f174b325088640f05bfa45349720a36a27a09
+local     ae30e883b292723d6859733b6bac8c839c897d8976b73cfd6f0da204e9eaff2e
+local     af5e64265d3d66c9ba8181760fc144448433a6cfc4af6b82539fb48636ff5b1a
+local     afdbfb25f5bdb7f39d6a44eee846278a91b48713fe89be20c2db97d1ba39a1df
+local     b6801a57b2cfaf36bb675e3042f6eb1c62c83a76eca2573a5c5409b50bb4e856
+local     b51924dd8aae1112a0367a7abeaaf7dbb9786785876005cfdff276f104970aa7
+local     baf70577ad5c15f2c869440555a97f518ea758b31e3b8ed5c1e80d9197c4fadd
+local     bf5cf632785fccce3272d848fb0f09840322197b443d2c2978c0803923078f49
+local     c6e2ed7c062b264cfea325a9cba317dd67976d2038a49429bf6a3f8828f600ac
+local     c50eec131d23c0d00b6ec52936d02d6479e3cd2898a256587e81f31524b8f547
+local     cdb8e81d9994b5f07e7c3fb418aad7f7047d7d8e1534dbdb840699c54cede094
+local     cdca541faf8fe74a61475e5324a1a3229231eb66c8882c8aff2e34c6330ceadd
+local     d0e672cd918354817e6b284b3f73a55d373776506a1cc59b9a657ddc67860157
+local     d6d7fccee7ca69fbd51edc3e61c61c3caccea6a868cebf1296a6ece191011971
+local     d8c733fc144f4b217bf46daa00f82af1b341a36b4141c4837f25d46fae8a0861
+local     da9eea8b87716bb62373cbdedf476365a59406b8e17821c9c76366ba28bf5cc1
+local     deb0be3aa2c6f8b326c751b3bad4ab31db45f0e1673101906598df21edb127ec
+local     dfa4c57540757145ef832562c5c8915b43595532bd32a725f2a2eb0448235355
+local     e1d948b2ac94f68ca2294045831d24cbeb08cdb8b9f21a8998c4fb024f35d530
+local     e01abcd40eeb9efa1628e936ea82cf2133acdd650bc4b8170ecf38277a035590
+local     eb00f5581fe3b6d8ade8db81b1c05faf2880bd996d05801d64d287961815a12d
+local     ecd51dbdc6244bd972ee934866737bfec6b91f2e55f4092a0bf2b811aad5709a
+local     f2ed760ef52ce656815504f8027c9b8174f6d8d504f3a34331a80e78558fa88e
+local     f6765af87f34e7fbd02d846743ba97ba8e4b4fa4f225b05d81b29e617e1bf362
+local     f60215d304350b67460fcba247499aa4cc419ff60df723018a457e4a5f43e01d
+local     f760421c9fb4ee3ab86b60eb9ed10141da959c236d9988e6e2f766bdf6ac2a07
+local     fb77105e7aebf9b6a6ee9b75d4be2070533faee5a7da65e96d6ee63a928407d1
+local     portainer_data
