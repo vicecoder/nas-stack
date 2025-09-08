@@ -1,0 +1,20 @@
+services:
+  samba:
+    image: ghcr.io/crazy-max/samba:latest
+    container_name: samba
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      - TZ=America/Lima
+      - SAMBA_WORKGROUP=WORKGROUP
+      - SAMBA_SERVER_STRING=RPI5 Samba
+      - WSDD2_ENABLE=1            # descubrimiento en Windows Explorer
+      - WSDD2_NETBIOS_NAME=lzservrpi
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    volumes:
+      - /srv/containers/samba/data:/data
+      - /DATA_NAS/datos/media:/samba/media
+      - /srv/containers/transmission/downloads:/samba/downloads
+      - /DATA_NAS/datos:/samba/datos
